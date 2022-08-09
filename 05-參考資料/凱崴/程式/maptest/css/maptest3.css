@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+* body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+}
+* body #svg-map svg {
+  stroke: white;
+}
+* body #svg-map svg path {
+  fill: transparent;
+}
+* body #testmask svg path {
+  fill: aqua;
+}
+* body #testmask2 .masked {
+  width: 800px;
+  height: 800px;
+  background-image: url(https://cdn.bella.tw/index_image/6Ps0iyteN3VSJkI5asbDsABwrSoqnF3SFkCIyCer.jpeg);
+  background-size: cover;
+  background-position: center bottom;
+  -webkit-mask-image: url(../taichungver3.svg#path3758);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: top right;
+  mask-image: url(../taichungver3.svg#path3758);
+  mask-repeat: no-repeat;
+  mask-position: top right;
+  margin-bottom: 10px;
+}
+* body #testmask3 .masked3 {
+  -webkit-mask-image: url(../taichungver3.svg);
+          mask-image: url(../taichungver3.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 1000px 1000px;
+          mask-size: 1000px 1000px;
+}
+* body #testmask3 .masked3 img {
+  width: 1000px;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+* body #testmask4 #svgmask4 {
+  width: 800px;
+  height: 800px;
+  -webkit-mask-image: url(../taichungver3.svg#path3758);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: top right;
+  mask-image: url(../taichungver3.svg#path3758);
+  mask-repeat: no-repeat;
+  mask-position: top right;
+  margin-bottom: 10px;
+}
+* body #testmask5 #svg5 path {
+  stroke: wheat;
+}/*# sourceMappingURL=maptest3.css.map */

@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+        #svg-map{
+            svg{
+                stroke: white;
+                path{
+                    fill: transparent;
+                }
+            }   
+        }
+        #testmask{
+            // background-color:red;
+            svg{
+                path{
+                    fill:aqua;
+                }
+                mask{
+                    
+                }
+            }
+        }
+        #testmask2{
+            .masked {
+                width: 800px;
+                height: 800px;
+                // background: blue linear-gradient(red, blue);
+                background-image: url(https://cdn.bella.tw/index_image/6Ps0iyteN3VSJkI5asbDsABwrSoqnF3SFkCIyCer.jpeg);
+                background-size: cover;
+                background-position: center bottom;
+                -webkit-mask-image: url(../taichungver3.svg#path3758);
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: top right;
+                mask-image: url(../taichungver3.svg#path3758);
+                mask-repeat: no-repeat;
+                mask-position: top right;
+                margin-bottom: 10px;
+                // mask-position: center;
+              }
+        }
+        #testmask3{
+            .masked3{
+                img{
+                    width: 1000px;
+                    height: 100%;
+                    user-select: none;
+                }
+                // -webkit-mask-image: url(../taichungver3.svg);
+                mask-image: url(../taichungver3.svg);
+                // -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;    
+                mask-size: 1000px 1000px;
+            }
+        }
+        #testmask4{
+            #svgmask4{
+                width: 800px;
+                height: 800px;
+                // background: blue linear-gradient(red, blue);
+                // background-image: url(https://cdn.bella.tw/index_image/6Ps0iyteN3VSJkI5asbDsABwrSoqnF3SFkCIyCer.jpeg);
+                // background-size: cover;
+                // background-position: center bottom;
+                -webkit-mask-image: url(../taichungver3.svg#path3758);
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: top right;
+                mask-image: url(../taichungver3.svg#path3758);
+                mask-repeat: no-repeat;
+                mask-position: top right;
+                margin-bottom: 10px;
+            }
+        }
+        #testmask5{
+            #svg5{
+                path{
+                    stroke: wheat;
+                }
+            }
+        }
+    }
+    
+}

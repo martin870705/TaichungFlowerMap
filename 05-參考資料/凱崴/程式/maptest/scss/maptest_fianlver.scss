@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        #svg-map {
+            #maptest1 {
+                #svg-body{
+                    height: 80%;
+                    width: 80%;
+                    
+                    path{
+                        stroke: white;
+                        stroke-width: 3px;
+                        fill:transparent
+                    }
+                    #taichungtest{
+                        // transform: scale(2);
+                        // transform-origin: 0% 0%;
+                        // transform: translate(-100px, -100px);
+                        &:hover{
+                            // transform: translate(-10px,10px);
+                            //  transform: translate(-100px, -100px);
+                        }
+                    }
+                    #taichungtestimg{
+                        // &:hover{
+                        //     transform: translate(-100px, -100px);
+                        // }
+                        transition: 2s;
+                    }
+                }
+            }
+        }
+    }
+}

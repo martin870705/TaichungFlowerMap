@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+* body {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+* body #svg-map #maptest1 #svg-body {
+  height: 80%;
+  width: 80%;
+}
+* body #svg-map #maptest1 #svg-body path {
+  stroke: white;
+  stroke-width: 3px;
+  fill: transparent;
+}
+* body #svg-map #maptest1 #svg-body #taichungtestimg {
+  transition: 2s;
+}/*# sourceMappingURL=maptest_fianlver.css.map */
