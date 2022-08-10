@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    body{
+        margin: 0px;
+        padding: 0px;
+        background-color: #fff;
+        #svg-map1{
+            svg{
+                path{
+                    fill:transparent;
+                    stroke: black;
+                }
+            }
+        }
+        #svg-map2{
+            svg{
+                path{
+                    stroke:red;
+                }
+            }
+        }
+    }
+}

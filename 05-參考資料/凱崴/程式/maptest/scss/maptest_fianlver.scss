@@ -4,17 +4,21 @@
     body {
         margin: 0;
         padding: 0;
-        background-color: #333;
+        background-color: #fff;
         #svg-map {
             #maptest1 {
                 #svg-body{
                     height: 80%;
                     width: 80%;
-                    
                     path{
-                        stroke: white;
-                        stroke-width: 3px;
-                        fill:transparent
+                        stroke: #333;
+                        stroke-width: 1px;
+                        fill:transparent;
+                        &:hover{
+                            // fill: #fa0;
+                            stroke-width: 5px;
+                            // transform: translate(3px ,-3px);
+                        }
                     }
                     #taichungtest{
                         // transform: scale(2);
