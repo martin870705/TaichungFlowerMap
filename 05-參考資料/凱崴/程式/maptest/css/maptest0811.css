@@ -13,6 +13,7 @@
 * body #map-test1 svg path {
   fill: transparent;
   stroke: white;
+  transform: translate();
 }
 * body #map-test1 svg path:hover {
   stroke-width: 2px;

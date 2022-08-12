@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    body{
+        #lightbox-test1 {
+            #container {
+                box-sizing: border-box;
+                display: flex;
+                padding: 100px 10px 0px 10px;
+                justify-content: space-around;
+                .button {
+                    width: 100px;
+                    height: 100px;
+                    background-color: #333;
+                }
+    
+                .modal {
+                    // display:none;
+                    position: fixed;
+                    z-index: 1;
+                    padding-top: 80px;
+                    left: 0px;
+                    top: 0px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.3);
+    
+                    .close {
+                        color: white;
+                        position: absolute;
+                        top: 10px;
+                        right: 25px;
+                        font-size: 50px;
+                        font-weight: bold;
+                    }
+    
+                    .close:hover,
+                    .close:focus {
+                        color: #999;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+    
+                    .modal-content {
+                        width: 100%;
+                        height: calc(100% - 80px);
+    
+                        .areabody {
+                            width: 90%;
+                            height: 100%;
+                            // background-color: #fa0;
+                            position: relative;
+                            background-color: #ffa;
+                            margin: auto;
+                            padding: 0;
+                            max-width: 1200px;
+                            display: flex;
+                            flex-direction: column;
+    
+                            .areabody-flower-information {
+                                width: 100%;
+                                height: 90%;
+                                background-color: rgba(20, 20, 20, 0.5);
+                                display: flex;
+    
+                                .areabody-flower-pic-swiper {
+                                    width: 60%;
+                                    height: 100%;
+                                    background-color: rgba(20, 20, 20, 0.5);
+                                    position: relative;
+    
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+    
+                                    .prev,
+                                    .next {
+                                        cursor: pointer;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translate(0, -50%);
+                                        padding: 16px;
+                                        color: white;
+                                        font-weight: bold;
+                                        font-size: 26px;
+                                        user-select: none;
+                                        -webkit-user-select: none;
+                                    }
+    
+                                    .prev {
+                                        left: 0px;
+                                        border-radius: 0px 3px 3px 0px;
+    
+                                        &:hover {
+                                            background-color: rgba(0, 0, 0, 0.1);
+                                        }
+                                    }
+    
+                                    .next {
+                                        right: 0px;
+                                        border-radius: 3px 0px 0px 3px;
+    
+                                        &:hover {
+                                            background-color: rgba(0, 0, 0, 0.1);
+                                        }
+                                    }
+                                }
+    
+                                .areabody-flower-description {
+                                    width: 40%;
+                                    height: 100%;
+                                    background-color: #222;
+                                }
+                            }
+    
+                            .areabody-location-icon {
+                                width: 100%;
+                                height: 10%;
+                                background-color: rgba(53, 61, 55, 0.5);
+                                display: flex;
+                                justify-content: start;
+                                padding: 0px 50px;
+    
+                                .area-location {
+                                    width: 100px;
+                                    background-color: pink;
+                                    border: 1px solid black;
+                                    // margin-right:40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+
+}

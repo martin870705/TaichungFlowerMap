@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/lightboxmodal.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="lightbox-test1">
+        <div id="container">
+            <div class="button1 button" data-mapcity="1" ></div>
+            <div class="button2 button" data-mapcity="2" ></div>
+            <div class="button3 button" data-mapcity="3" ></div>
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal();">&times</span>
+              <div class="modal-content">
+                <div class="areabody">
+                  <div class="areabody-flower-information">
+                    <div class="areabody-flower-pic-swiper" id="afps">
+                      <!--             <img src="https://img.lovepik.com/element/40075/4154.png_860.png" alt=""> -->
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="areabody-flower-description"></div>
+                  </div>
+                  <div class="areabody-location-icon">
+                    <div class="area-location areabody-location1">1</div>
+                    <div class="area-location areabody-location2">2</div>
+                    <div class="area-location areabody-location3">3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <div id="imgtest">
+        <!-- <img src="./img/花地圖/后里區/中社花市鬱金香.jpg" alt=""> -->
+    </div>
+
+    <script src="./lightboxmodal.js"></script>
+</body>
+</html>
