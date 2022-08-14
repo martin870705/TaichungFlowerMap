@@ -30,8 +30,13 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    background-color: #222;
                     svg{
-                        width: 50%;
+                        width: 100%;
+                        path{
+                            stroke: #fff;
+                            fill:transparent;
+                        }
                     }
                 }
     

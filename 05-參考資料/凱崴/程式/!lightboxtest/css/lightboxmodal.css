@@ -30,9 +30,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #222;
 }
 * body #lightbox-test1 .container #map-svg svg {
-  width: 50%;
+  width: 100%;
+}
+* body #lightbox-test1 .container #map-svg svg path {
+  stroke: #fff;
+  fill: transparent;
 }
 * body #lightbox-test1 .container .modal {
   display: none;
