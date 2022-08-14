@@ -31,6 +31,19 @@ function plusSlides(n) {
     // });
 }
 
+const areas =document.querySelectorAll('#map-svg .area-hover-effect');
+console.log(areas)
+areas.forEach(function(area,num) {
+    area.addEventListener('click',function(){
+        openModal();
+        let areaname=area.getAttribute("data-areaname");
+        //有順利抓到attribute裡面藏的資料
+        // console.log(areaname);
+        // console.log(typeof(areaname));
+        flowermap_filter(areaname,0);
+        
+    })
+});
 
 const btns = document.querySelectorAll('#lightbox-test1 .container .button');
 //確認有抓到全部的按鈕
