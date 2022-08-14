@@ -1,18 +1,41 @@
 * {
   box-sizing: border-box;
 }
-* body #lightbox-test1 #container {
+* ul {
+  list-style: none;
+}
+* body {
+  margin: 0px;
+  padding: 0px;
+}
+* body #lightbox-test1 .test {
+  height: 1000px;
+  width: 100%;
+  background-color: #aaa;
+}
+* body #lightbox-test1 .container {
   box-sizing: border-box;
   display: flex;
-  padding: 100px 10px 0px 10px;
   justify-content: space-around;
 }
-* body #lightbox-test1 #container .button {
+* body #lightbox-test1 .container .button {
   width: 100px;
   height: 100px;
   background-color: #333;
 }
-* body #lightbox-test1 #container .modal {
+* body #lightbox-test1 .container #map-svg {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body #lightbox-test1 .container #map-svg svg {
+  width: 50%;
+}
+* body #lightbox-test1 .container .modal {
+  display: none;
   position: fixed;
   z-index: 1;
   padding-top: 80px;
@@ -22,7 +45,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-* body #lightbox-test1 #container .modal .close {
+* body #lightbox-test1 .container .modal .close {
   color: white;
   position: absolute;
   top: 10px;
@@ -30,17 +53,17 @@
   font-size: 50px;
   font-weight: bold;
 }
-* body #lightbox-test1 #container .modal .close:hover,
-* body #lightbox-test1 #container .modal .close:focus {
+* body #lightbox-test1 .container .modal .close:hover,
+* body #lightbox-test1 .container .modal .close:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
 }
-* body #lightbox-test1 #container .modal .modal-content {
+* body #lightbox-test1 .container .modal .modal-content {
   width: 100%;
   height: calc(100% - 80px);
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody {
+* body #lightbox-test1 .container .modal .modal-content .areabody {
   width: 90%;
   height: 100%;
   position: relative;
@@ -51,26 +74,30 @@
   display: flex;
   flex-direction: column;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information {
   width: 100%;
   height: 90%;
   background-color: rgba(20, 20, 20, 0.5);
   display: flex;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
   width: 60%;
   height: 100%;
   background-color: rgba(20, 20, 20, 0.5);
   position: relative;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: none;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev,
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img.afps-img-active {
+  display: inline;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev,
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -84,26 +111,30 @@
        user-select: none;
   -webkit-user-select: none;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev {
   left: 0px;
   border-radius: 0px 3px 3px 0px;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next {
   right: 0px;
   border-radius: 3px 0px 0px 3px;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
   width: 40%;
   height: 100%;
   background-color: #222;
+  color: wheat;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-location-icon {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description ul li {
+  display: flex;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon {
   width: 100%;
   height: 10%;
   background-color: rgba(53, 61, 55, 0.5);
@@ -111,7 +142,7 @@
   justify-content: start;
   padding: 0px 50px;
 }
-* body #lightbox-test1 #container .modal .modal-content .areabody .areabody-location-icon .area-location {
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location {
   width: 100px;
   background-color: pink;
   border: 1px solid black;

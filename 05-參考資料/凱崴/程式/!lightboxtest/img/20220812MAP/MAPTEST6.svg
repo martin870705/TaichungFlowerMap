@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/lightboxmodal.css">
-  <title>Document</title>
-</head>
-
-<body>
-  <div id="lightbox-test1">
-    <div class="test"></div>
-    <div class="container">
-      <!-- 測試用按鈕 -->
-      <!-- <div class="button1 button" data-mapcity="1" onclick="flowermap_filter('后里區',0);"></div>
-      <div class="button2 button" data-mapcity="2" onclick="flowermap_filter('烏日區',0)"></div>
-      <div class="button3 button" data-mapcity="3" onclick="flowermap_filter('中區',0)"></div> -->
-      <div id="map-svg">
-        <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1"
 	 id="svg2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
@@ -1653,34 +1633,3 @@
 	<text transform="matrix(1 0 0 1 247.2577 242.1629)" class="st1 st2 st4">大安區</text>
 </g>
 </svg>
-
-      </div>
-      <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal();">&times</span>
-        <div class="modal-content">
-          <div class="areabody">
-            <div class="areabody-flower-information">
-              <div class="areabody-flower-pic-swiper" id="afps">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <!-- 格式說明 實際上在執行時js會將整個輪播的區塊清空再重填 -->
-                <img src="./img/花地圖/北屯區/廍子公園.png" alt="" class="afps-img-active">
-              </div>
-              <div class="areabody-flower-description" id="afd"></div>
-            </div>
-            <div class="areabody-location-icon" id="ali">
-              <div class="area-location areabody-location1">demo1</div>
-              <div class="area-location areabody-location2">demo2</div>
-              <div class="area-location areabody-location3">demo3</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <script src="./lightboxmodal.js"></script>
-</body>
-
-</html>
