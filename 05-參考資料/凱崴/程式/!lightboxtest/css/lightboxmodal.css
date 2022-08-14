@@ -38,6 +38,16 @@
 * body #lightbox-test1 .container #map-svg svg path {
   stroke: #fff;
   fill: transparent;
+  transition: 0.3s;
+}
+* body #lightbox-test1 .container #map-svg svg path.area-hover-effect:hover {
+  fill: rgb(255, 236, 70);
+}
+* body #lightbox-test1 .container #map-svg svg g text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 * body #lightbox-test1 .container .modal {
   display: none;

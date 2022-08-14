@@ -36,6 +36,15 @@
                         path{
                             stroke: #fff;
                             fill:transparent;
+                            transition: 0.3s;
+                        }
+                        path.area-hover-effect:hover{
+                            fill:rgb(255, 236, 70);
+                        }
+                        g{
+                            text{
+                                user-select: none;
+                            }
                         }
                     }
                 }
