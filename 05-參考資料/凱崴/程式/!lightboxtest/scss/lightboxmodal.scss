@@ -1,4 +1,8 @@
 * {
+    @keyframes fadein {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
     ul{
          list-style: none;
     }
@@ -58,7 +62,7 @@
                     top: 0px;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0, 0, 0, 0.3);
+                    background-color: rgba(0, 0, 0, 0.7);
     
                     .close {
                         color: white;
@@ -67,6 +71,7 @@
                         right: 25px;
                         font-size: 50px;
                         font-weight: bold;
+                        user-select: none;
                     }
     
                     .close:hover,
@@ -103,14 +108,16 @@
                                     height: 100%;
                                     background-color: rgba(20, 20, 20, 0.5);
                                     position: relative;
-    
                                     img{
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
                                         display: none;
+                                        animation:fadein 2s;
+                                        // transition: 3s;
                                     }
                                     img.afps-img-active{
+                                        transition: 5s;
                                         display: inline;
                                     }
                                     .prev,
@@ -125,6 +132,8 @@
                                         font-size: 26px;
                                         user-select: none;
                                         -webkit-user-select: none;
+                                        // 必須要加上z-index否則在img animation期間會被蓋在圖片下方
+                                        z-index: 1;
                                     }
     
                                     .prev {

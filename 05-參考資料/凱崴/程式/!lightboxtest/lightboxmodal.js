@@ -11,7 +11,7 @@ function plusSlides(n) {
     for(let i=0;i<pics.length;i++){
         if(pics[i].classList.contains('afps-img-active')){
             pics[i].classList.remove('afps-img-active');
-            let nextactive=(i+n)%(pics.length);
+            let nextactive=(i+pics.length+n)%(pics.length);
             pics[nextactive].classList.add('afps-img-active');
             break;
             // console.log(pic)
@@ -143,7 +143,7 @@ function flowermap_filter(area, index) {
             }
 
             if (array_imgsrc.length == 1) {
-                //這邊就不需要左右的按鈕了,所以重置一次areabody-flower-pic-swiper區塊
+                //只有一張圖的話這邊就不需要左右的按鈕了,所以重置一次areabody-flower-pic-swiper區塊
                 afps_img.textContent = ` `;
             }
             // 依序插入圖片
@@ -195,4 +195,17 @@ function imgtest() {
             }
             // console.log(mydata[0]);
         })
+}
+
+//台中各區氣象資訊 https://opendata.cwb.gov.tw/dataset/warning/F-C0032-021
+//https://opendata.cwb.gov.tw/opendatadoc/MFC/A0012-001.pdf   說明文件
+function weatherfetchtest(){
+    fetch('http://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-073?Authorization=CWB-4305977E-C979-416B-B5F0-7A4C2C7CBABA&format=JSON')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(mydata){
+        console.log(mydata);
+        console.log('testaaa');
+    })
 }

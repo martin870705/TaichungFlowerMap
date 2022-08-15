@@ -1,6 +1,22 @@
 * {
   box-sizing: border-box;
 }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * ul {
   list-style: none;
 }
@@ -58,7 +74,7 @@
   top: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 * body #lightbox-test1 .container .modal .close {
   color: white;
@@ -67,6 +83,10 @@
   right: 25px;
   font-size: 50px;
   font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 * body #lightbox-test1 .container .modal .close:hover,
 * body #lightbox-test1 .container .modal .close:focus {
@@ -107,8 +127,11 @@
   -o-object-fit: cover;
      object-fit: cover;
   display: none;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img.afps-img-active {
+  transition: 5s;
   display: inline;
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev,
@@ -125,6 +148,7 @@
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
+  z-index: 1;
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev {
   left: 0px;
