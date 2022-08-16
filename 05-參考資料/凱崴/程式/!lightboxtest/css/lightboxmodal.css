@@ -90,11 +90,28 @@
   position: absolute;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 {
-  left: 30%;
-  top: 30%;
+  left: 20%;
+  top: 0%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 img {
-  width: 50%;
+  width: 100%;
+  transform: scale(0.6);
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 {
+  left: 30%;
+  top: -40%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 img {
+  width: 100%;
+  transform: scale(0.4);
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 {
+  right: 30%;
+  top: 50%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 img {
+  width: 100%;
+  transform: scale(0.5);
 }
 * body #lightbox-test1 .container .modal {
   display: none;

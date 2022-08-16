@@ -100,17 +100,28 @@
                                 position: absolute;
                             }
                             .bird1{
-                                left: 30%;
-                                top: 30%;
+                                left: 20%;
+                                top: 0%;
                                 img{
-                                    width: 50%;
+                                    width: 100%;
+                                    transform: scale(0.6);
                                 }
                             }
                             .bird2{
-                                
+                                left:30%;
+                                top:-40%;
+                                img{
+                                    width: 100%;
+                                    transform: scale(0.4);
+                                }
                             }
                             .bird3{
-
+                                right:30%;
+                                top:50%;
+                                img{
+                                    width: 100%;
+                                    transform: scale(0.5);
+                                }
                             }
                         }
                     }
