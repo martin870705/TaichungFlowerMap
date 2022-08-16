@@ -203,165 +203,165 @@
 
 
 
-
+    <script src=""></script>
     <script>
 
-        const choose_places = document.querySelector('#places')
-        const choose_mouth = document.querySelector('#mouth')
-        const choose_flower = document.querySelector('#flower')
-        const flower_icon = document.querySelector('#icon')
-        const flower_box = document.querySelector('#flower-box')
+        // const choose_places = document.querySelector('#places')
+        // const choose_mouth = document.querySelector('#mouth')
+        // const choose_flower = document.querySelector('#flower')
+        // const flower_icon = document.querySelector('#icon')
+        // const flower_box = document.querySelector('#flower-box')
 
-        let areaTag = ''
-        let placesTag = ''
+        // let areaTag = ''
+        // let placesTag = ''
 
-        // test.innerHTML = FLOWERS[0].tag.join('、')
+        // // test.innerHTML = FLOWERS[0].tag.join('、')
 
-        fetch('./臺中市賞花景點.json')
-            .then(function (response) {
-                return response.json();
-            }).then(function (datas) {
-                datas.forEach(function (data) {
-                    if (data.行政區 != areaTag) {
-                        choose_places.innerHTML += `<optgroup label="${data.行政區}">`
-                        if (data.地點 != placesTag) {
-                            choose_places.innerHTML += `<option>${data.地點}</option>`
-                            placesTag = data.地點
-                        }
-                        areaTag = data.行政區
-                    } else {
-                        if (data.地點 != placesTag) {
-                            choose_places.innerHTML += `<option>${data.地點}</option>`
-                            // choose_places.innerHTML += `<option>&emsp;${data.地點}</option>`
-                            placesTag = data.地點
-                        }
-                    }
-                })
-            })
+        // fetch('./臺中市賞花景點.json')
+        //     .then(function (response) {
+        //         return response.json();
+        //     }).then(function (datas) {
+        //         datas.forEach(function (data) {
+        //             if (data.行政區 != areaTag) {
+        //                 choose_places.innerHTML += `<optgroup label="${data.行政區}">`
+        //                 if (data.地點 != placesTag) {
+        //                     choose_places.innerHTML += `<option>${data.地點}</option>`
+        //                     placesTag = data.地點
+        //                 }
+        //                 areaTag = data.行政區
+        //             } else {
+        //                 if (data.地點 != placesTag) {
+        //                     choose_places.innerHTML += `<option>${data.地點}</option>`
+        //                     // choose_places.innerHTML += `<option>&emsp;${data.地點}</option>`
+        //                     placesTag = data.地點
+        //                 }
+        //             }
+        //         })
+        //     })
 
-        for (let i = 1; i < 13; i++) {
-            choose_mouth.innerHTML += `<option>${i}月</option>`
-        }
+        // for (let i = 1; i < 13; i++) {
+        //     choose_mouth.innerHTML += `<option>${i}月</option>`
+        // }
 
-        fetch('./flower_data.json')
-            .then(function (respomse) {
-                return respomse.json()
-            }).then(function (flowers) {
-                console.log(flowers);
-                flowers.forEach(function (flower) {
-                    choose_flower.innerHTML += `<option>${flower.flower_name}</option>`
-                })
+        // fetch('./flower_data.json')
+        //     .then(function (respomse) {
+        //         return respomse.json()
+        //     }).then(function (flowers) {
+        //         console.log(flowers);
+        //         flowers.forEach(function (flower) {
+        //             choose_flower.innerHTML += `<option>${flower.flower_name}</option>`
+        //         })
 
-                choose_places.addEventListener('change', function () {
-                    flower_icon.innerHTML = ''
-                    choose_flower.selectedIndex = '0'
-                    flowers.forEach(function (flower) {
-                        if (choose_places.value == '請選擇地點') {
-                            // console.log(123);
-                            if (flower.flowering.includes(choose_mouth.value)) {
-                                flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                            }
-                        }
-                        else if (choose_mouth.value == '請選擇月份') {
-                            if (flower.flower_place.includes(choose_places.value.trim())) {
-                                flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                            }
-                        } else {
-                            if (flower.flower_place.includes(choose_places.value.trim()) && flower.flowering.includes(choose_mouth.value)) {
-                                flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //         choose_places.addEventListener('change', function () {
+        //             flower_icon.innerHTML = ''
+        //             choose_flower.selectedIndex = '0'
+        //             flowers.forEach(function (flower) {
+        //                 if (choose_places.value == '請選擇地點') {
+        //                     // console.log(123);
+        //                     if (flower.flowering.includes(choose_mouth.value)) {
+        //                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                     }
+        //                 }
+        //                 else if (choose_mouth.value == '請選擇月份') {
+        //                     if (flower.flower_place.includes(choose_places.value.trim())) {
+        //                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                     }
+        //                 } else {
+        //                     if (flower.flower_place.includes(choose_places.value.trim()) && flower.flowering.includes(choose_mouth.value)) {
+        //                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
 
-                            }
-                        }
-                    })
-                    console.log('================');
-                })
+        //                     }
+        //                 }
+        //             })
+        //             console.log('================');
+        //         })
 
-                choose_mouth.addEventListener('change', function () {
-                    flower_icon.innerHTML = ''
-                    choose_flower.selectedIndex = '0'
-                    flowers.forEach(function (flower) {
-                        if (choose_mouth.value == '請選擇月份') {
-                            if (flower.flower_place.includes(choose_places.value.trim())) {
-                                flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                            }
-                        }
-                        else if (choose_places.value == '請選擇地點') {
-                            if (flower.flowering.includes(choose_mouth.value)) {
-                                flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                            }
-                        } else {
-                            if (flower.flower_place.includes(choose_places.value.trim()) && flower.flowering.includes(choose_mouth.value)) {
-                                flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                            }
-                        }
-                    })
-                    console.log('================');
-                })
+        //         choose_mouth.addEventListener('change', function () {
+        //             flower_icon.innerHTML = ''
+        //             choose_flower.selectedIndex = '0'
+        //             flowers.forEach(function (flower) {
+        //                 if (choose_mouth.value == '請選擇月份') {
+        //                     if (flower.flower_place.includes(choose_places.value.trim())) {
+        //                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                     }
+        //                 }
+        //                 else if (choose_places.value == '請選擇地點') {
+        //                     if (flower.flowering.includes(choose_mouth.value)) {
+        //                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                     }
+        //                 } else {
+        //                     if (flower.flower_place.includes(choose_places.value.trim()) && flower.flowering.includes(choose_mouth.value)) {
+        //                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                     }
+        //                 }
+        //             })
+        //             console.log('================');
+        //         })
 
-                choose_flower.addEventListener('change', function () {
-                    flower_icon.innerHTML = ''
-                    choose_mouth.selectedIndex = '0'
-                    choose_places.selectedIndex = '0'
-                    flowers.forEach(function (flower) {
-                        if (flower.flower_name == choose_flower.value) {
+        //         choose_flower.addEventListener('change', function () {
+        //             flower_icon.innerHTML = ''
+        //             choose_mouth.selectedIndex = '0'
+        //             choose_places.selectedIndex = '0'
+        //             flowers.forEach(function (flower) {
+        //                 if (flower.flower_name == choose_flower.value) {
 
-                            flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                        } else if (choose_flower.value == '全部') {
-                            flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                        }
-                    })
+        //                     flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                 } else if (choose_flower.value == '全部') {
+        //                     flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+        //                 }
+        //             })
 
-                })
-            })
+        //         })
+        //     })
 
-        fetch('./flower_data.json')
-            .then(function (respomse) {
-                return respomse.json()
-            }).then(function (flowers) {
-                flowers.forEach(function (flower) {
+        // fetch('./flower_data.json')
+        //     .then(function (respomse) {
+        //         return respomse.json()
+        //     }).then(function (flowers) {
+        //         flowers.forEach(function (flower) {
 
-                    flower_box.innerHTML += `
-                            <div class="none information" data-name="${flower.flower_name}">
-                                <div class="flower-image">
-                                    <img src="${flower.flower_img}" alt="${flower.flower_name}">
-                                </div>
-                                <div class="flower-news">
-                                    <h2>${flower.flower_name}</h2>
-                                    <div class="news">
-                                        <p>花語 | </p>
-                                        <span>${flower.flower_language}</span>
-                                    </div>
-                                    <div class="news">
-                                        <p>花期 | </p>
-                                        <span>${flower.flowering.join('、')}</span>
-                                    </div>
-                                    <div class="news">
-                                        <p>地點 | </p>
-                                        <span>${flower.flower_place.join('、')}</span>
-                                    </div>
-                                </div>
-                                <div class="flower-introduce">
-                                    <p>${flower.flower_introduce}</p>
-                                </div>
-                            </div>
-                            `
+        //             flower_box.innerHTML += `
+        //                     <div class="none information" data-name="${flower.flower_name}">
+        //                         <div class="flower-image">
+        //                             <img src="${flower.flower_img}" alt="${flower.flower_name}">
+        //                         </div>
+        //                         <div class="flower-news">
+        //                             <h2>${flower.flower_name}</h2>
+        //                             <div class="news">
+        //                                 <p>花語 | </p>
+        //                                 <span>${flower.flower_language}</span>
+        //                             </div>
+        //                             <div class="news">
+        //                                 <p>花期 | </p>
+        //                                 <span>${flower.flowering.join('、')}</span>
+        //                             </div>
+        //                             <div class="news">
+        //                                 <p>地點 | </p>
+        //                                 <span>${flower.flower_place.join('、')}</span>
+        //                             </div>
+        //                         </div>
+        //                         <div class="flower-introduce">
+        //                             <p>${flower.flower_introduce}</p>
+        //                         </div>
+        //                     </div>
+        //                     `
 
-                })
-            })
+        //         })
+        //     })
 
 
-        function check(Flower) {
-            const informations = document.querySelectorAll('.information')
-            informations.forEach(function (information) {
-                if (Flower.alt == information.dataset.name) {
-                    information.classList.remove('none')
-                } else {
-                    information.classList.add('none')
+        // function check(Flower) {
+        //     const informations = document.querySelectorAll('.information')
+        //     informations.forEach(function (information) {
+        //         if (Flower.alt == information.dataset.name) {
+        //             information.classList.remove('none')
+        //         } else {
+        //             information.classList.add('none')
 
-                }
+        //         }
 
-            })
-        }
+        //     })
+        // }
                     // <p>地點 | <span>${flower.flower_place.join('、')}</span></p>
 
 
