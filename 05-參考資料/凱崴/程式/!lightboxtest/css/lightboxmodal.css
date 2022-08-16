@@ -24,46 +24,77 @@
   margin: 0px;
   padding: 0px;
 }
+* body .test2 {
+  position: absolute;
+  transform: translate(0px, -20%);
+}
+* body .test2 img {
+  width: 100%;
+}
+* body #lightbox-test1 {
+  position: relative;
+}
 * body #lightbox-test1 .test {
   height: 1000px;
   width: 100%;
-  background-color: #aaa;
 }
 * body #lightbox-test1 .container {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  padding-top: 150px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
 }
-* body #lightbox-test1 .container .button {
-  width: 100px;
-  height: 100px;
-  background-color: #333;
-}
 * body #lightbox-test1 .container #map-svg {
   width: 100%;
-  height: 100vh;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  position: relative;
 }
 * body #lightbox-test1 .container #map-svg svg {
-  width: 100%;
+  width: 90%;
 }
 * body #lightbox-test1 .container #map-svg svg path {
   stroke: #fff;
+  stroke-width: 3px;
   fill: transparent;
   transition: 0.3s;
 }
 * body #lightbox-test1 .container #map-svg svg path.area-hover-effect:hover {
-  fill: rgb(255, 236, 70);
+  fill: rgb(190, 43, 68);
 }
 * body #lightbox-test1 .container #map-svg svg g text {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  fill: white;
+}
+* body #lightbox-test1 .container #map-svg .decorate {
+  width: 100%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+}
+* body #lightbox-test1 .container #map-svg .decorate > img {
+  width: 15%;
+  height: auto;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .birdbgi {
+  position: absolute;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 {
+  left: 30%;
+  top: 30%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 img {
+  width: 50%;
 }
 * body #lightbox-test1 .container .modal {
   display: none;
@@ -109,17 +140,29 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 500px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody {
+    height: 500px;
+  }
+}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information {
   width: 100%;
   height: 90%;
   background-color: rgba(20, 20, 20, 0.5);
   display: flex;
+  flex-wrap: wrap;
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
   width: 60%;
   height: 100%;
   background-color: rgba(20, 20, 20, 0.5);
   position: relative;
+}
+@media (max-width: 500px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
+    width: 100%;
+    height: 100px;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img {
   width: 100%;
@@ -169,6 +212,12 @@
   height: 100%;
   background-color: #222;
   color: wheat;
+}
+@media (max-width: 500px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
+    width: 100%;
+    height: 100px;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description ul li {
   display: flex;
