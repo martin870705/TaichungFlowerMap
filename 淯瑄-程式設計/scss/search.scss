@@ -1,0 +1,168 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .flower_img-box {
+        height: 900px;
+        position: relative;
+
+        .choose {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+
+            select {
+                width: 220px;
+                margin: 0px 45px;
+                height: 50px;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 16px;
+
+                optgroup {
+                    color: white;
+                    background-color: cadetblue;
+                }
+            }
+
+            // img {
+            //     width: 60PX;
+            //     margin: 0PX 10PX;
+            // }
+
+            // #places{
+
+            // }
+
+            // #mouth{
+
+            // }
+
+            // #flower{
+
+            // }
+        }
+
+        #icon-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            #icon {
+                width: 900px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                img {
+                    width: 60PX;
+                    margin: 0PX 10PX;
+                    cursor: pointer;
+                    margin-bottom: 25px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        #flower-box {
+            .information {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .flower-image {
+                    width: 550px;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+
+                }
+
+                .flower-news {
+                    width: 300px;
+                    padding-top: 100px;
+                    word-break: break-all;
+
+                    h2 {
+                        margin-bottom: 30px;
+                    }
+
+                    .news {
+                        display: inline-block;
+                        width: 300px;
+                        line-height: 35px;
+                        margin: 4px 0px;
+
+                        p {
+                            float: left;
+                            width: 50px;
+                            font-size: 20px;
+                            margin: 0px;
+                        }
+
+                        span {
+                            float: left;
+                            width: 250px;
+                            text-align: justify;
+                            // display: -webkit-box;
+                            // overflow: hidden; text-overflow:ellipsis;
+
+                            // -webkit-line-clamp: 2; // 想顯示的行數 lines you want to display
+
+                            // -webkit-box-orient: vertical;
+
+
+
+                        }
+                    }
+                }
+
+                .flower-introduce {
+                    padding-top: 40px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        width: 850px;
+                        word-break: break-all;
+                        text-align: justify;
+                        line-height: 30px;
+                    }
+                }
+
+            }
+
+            .none {
+                display: none;
+            }
+
+        }
+
+        .girl-img {
+            img {
+                position: absolute;
+                bottom: -100px;
+                right: 0px;
+                width: 200px;
+
+                @media (max-width:1250px) {
+                    right: -70px;
+                    width: 150px;
+                }
+            }
+        }
+
+    }
+}
