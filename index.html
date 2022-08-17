@@ -4,20 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Satisfy&display=swap"
+        rel="stylesheet">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/topic.css">
     <link rel="stylesheet" href="./css/search.css">
+    <style>
+        main{
+            position: relative;
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <header><!--封面-->
-        <nav></nav>
+
+        <div id="banner">
+            <div class="container">
+                <div class="title">
+                    <h1 class="title-1">TAICHUNG</h1>
+                    <h2 class="title-2">Flower Map</h2>
+                </div>
+                <p class="link-right"></p>
+                <div class="ham">
+                    <span class="flat"></span>
+                    <p class="flat-mid "></p>
+                 </div>
+                 <div class="catalog">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            
+                        </ul>
+                    </div>
+                 </div>
+                <video autoplay muted loop>
+                    <source src="./img/video/Topic.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </header>
     <main>
         <section></section><!--地圖-->
         <section></section><!--花期-->
         <section>
             <div class="flower_img-box">
+                <img src="./程式用圖區/title-花卉介紹@2x.png" alt="">
+                <h2>尋找你心中那朵花</h2>
                 <div class="choose">
-
+                    <!-- <form> -->
                     <select id="places">
                         <option>請選擇地點</option>
                     </select>
@@ -28,17 +79,24 @@
                         <option>請選擇花種</option>
                         <option>全部</option>
                     </select>
-        
+    
+                    <!-- </form> -->
                 </div>
                 <div id="icon-box">
                     <div id="icon">
-        
+    
                     </div>
                 </div>
-                <div id=flower-box>
-                </div>
-                <div class="girl-img">
-                    <img src="./程式用圖區/girl@2x.png" alt="">
+                <div class="flower-image-box">
+                    <div class="bird-box">
+                        <img src="./img/裝飾/map-bird02.png" alt="">
+                    </div>
+                    <div id=flower-box>
+                    </div>
+                    <div class="girl-img">
+                        <img src="./img/裝飾/girl@2x.png" alt="">
+                    </div>
+                    
                 </div>
             </div>
         </section><!--搜索-->
@@ -48,5 +106,68 @@
 
 
     <script src="./js/search.js"></script>
+    <script>
+        // const text3 = document.querySelector(".ham")
+        const ham = document.querySelector(".ham")
+        const catalog = document.querySelector(".catalog")
+        const content = document.querySelector(".content")
+        const flat = document.querySelector(".flat")
+        const flat_mid = document.querySelector(".flat-mid")
+        let i =0;
+        let k =0;
+        ham.addEventListener("click",function(){
+          if(i == 0){
+           
+              flat_mid.classList.add('none')
+              content.classList.add('block')
+              flat.classList.add('rotate-1')
+              flat.classList.add('rotate-2')
+              flat_mid.classList.remove('slow')
+              i++
+          }else{
+            
+            content.classList.remove('block')
+            flat_mid.classList.add('slow')
+            flat_mid.classList.remove('none')
+            flat.classList.remove('rotate-1')
+            flat.classList.remove('rotate-2')
+              i = 0;
+          }
+          
+        })
+   
+        // function open(a){
+        //   ham.classList.add('black')
+        // }    
+        window.addEventListener("scroll",function(){
+        //   console.log(scrollY);
+          if(window.scrollY >= 436){
+            flat_mid.classList.remove('slow')
+            flat.classList.add('black2')
+            flat_mid.classList.add('black2')
+              
+              
+            //   ham.addEventListener('click',function(){
+            //     if(window.scrollY >= 436 && content.classList.contains('block')){
+            //         flat.classList.remove('black2')
+            //     }
+            //       }) 
+          }
+          else if(window.scrollY < 436 ){
+            flat.classList.remove('black2')
+            flat_mid.classList.remove('black2')
+          }
+        })
+        console.log(ham);
+        ham.addEventListener('click',function(){
+            console.log(flat);
+            if(flat.classList.contains('switch')){
+                flat.classList.remove('switch')
+            }else{
+                flat.classList.add('switch')
+                
+            }
+        })
+    </script>
 </body>
 </html>

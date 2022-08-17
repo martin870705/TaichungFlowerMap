@@ -1,0 +1,19 @@
+.flowering {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.flowering .table {
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px -4px black;
+  width: 80%;
+  max-width: 1400px;
+  z-index: 1;
+}
+.flowering .Mountain {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  z-index: 0;
+}/*# sourceMappingURL=flowering.css.map */

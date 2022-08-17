@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* ul {
+  list-style: none;
+}
+* body {
+  margin: 0px;
+  padding: 0px;
+}
+* body .test2 {
+  position: absolute;
+  transform: translate(0px, -22%);
+}
+* body .test2 img {
+  width: 100%;
+}
+* body #lightbox-test1 {
+  position: relative;
+}
+* body #lightbox-test1 .test {
+  height: 1000px;
+  width: 100%;
+}
+* body #lightbox-test1 .container {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  padding-top: 150px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+* body #lightbox-test1 .container #map-svg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+* body #lightbox-test1 .container #map-svg svg {
+  width: 90%;
+}
+* body #lightbox-test1 .container #map-svg svg path {
+  stroke: #fff;
+  stroke-width: 3px;
+  fill: transparent;
+  transition: 0.3s;
+}
+* body #lightbox-test1 .container #map-svg svg path.area-hover-effect:hover {
+  fill: rgb(190, 43, 68);
+}
+* body #lightbox-test1 .container #map-svg svg g text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  fill: white;
+}
+* body #lightbox-test1 .container #map-svg .decorate {
+  width: 100%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+}
+* body #lightbox-test1 .container #map-svg .decorate > img {
+  width: 15%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .birdbgi {
+  position: absolute;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 {
+  left: 20%;
+  top: 0%;
+  width: 10%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 img {
+  width: 100%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 {
+  left: 30%;
+  top: -50%;
+  width: 5%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 img {
+  width: 100%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 {
+  right: 35%;
+  top: 110%;
+  width: 3%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 img {
+  width: 100%;
+}
+* body #lightbox-test1 .container .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 80px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+* body #lightbox-test1 .container .modal .close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 50px;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+* body #lightbox-test1 .container .modal .close:hover,
+* body #lightbox-test1 .container .modal .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+* body #lightbox-test1 .container .modal .modal-content {
+  width: 100%;
+  height: calc(100% - 80px);
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  background-color: #ffa;
+  margin: auto;
+  padding: 0;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody {
+    height: 500px;
+  }
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information {
+  width: 100%;
+  height: 90%;
+  background-color: rgba(20, 20, 20, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.5);
+  position: relative;
+}
+@media (max-width: 500px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
+    width: 100%;
+    height: 100px;
+  }
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img.afps-img-active {
+  transition: 5s;
+  display: inline;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev,
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 26px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev {
+  left: 0px;
+  border-radius: 0px 3px 3px 0px;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .prev:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next {
+  right: 0px;
+  border-radius: 3px 0px 0px 3px;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper .next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
+  width: 40%;
+  height: 100%;
+  background-color: #222;
+  color: wheat;
+}
+@media (max-width: 500px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
+    width: 100%;
+    height: 100px;
+  }
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description ul li {
+  display: flex;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon {
+  width: 100%;
+  height: 10%;
+  background-color: rgba(53, 61, 55, 0.5);
+  display: flex;
+  justify-content: start;
+  padding: 0px 50px;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location {
+  width: 100px;
+  background-color: pink;
+  border: 1px solid black;
+}/*# sourceMappingURL=lightboxmodal.css.map */
