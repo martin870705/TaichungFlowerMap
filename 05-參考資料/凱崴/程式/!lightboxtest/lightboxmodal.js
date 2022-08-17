@@ -1,9 +1,15 @@
 function openModal() {
     document.getElementById("myModal").style.display = "block";
+    //因為position fixed會打架所以直接拔掉nav的按鈕
+    document.querySelector('#banner .ham').style.display="none";
+    document.querySelector('#banner .catalog').style.display="none";
 }
 
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
+        //恢復按鈕
+    document.querySelector('#banner .ham').style.display="block";
+    document.querySelector('#banner  .catalog').style.display="block";
 }
 
 function plusSlides(n) {
@@ -41,7 +47,6 @@ areas.forEach(function(area,num) {
         // console.log(areaname);
         // console.log(typeof(areaname));
         flowermap_filter(areaname,0);
-        
     })
 });
 
@@ -136,10 +141,10 @@ function flowermap_filter(area, index) {
 
             //利用array_area_location的長度(代表該區有幾個不同的點)決定for迴圈要做幾次
             //接著插入地點的block(待設計安排)
-            for (let i = 1; i <= array_area_location.length; i++) {
-                let iconnum = i - 1;
+            for (let i = 0; i < array_area_location.length; i++) {
+                let iconnum = i + 1;
                 ali_block.innerHTML += `
-                <div class="area-location areabody-location${i}" onclick="flowermap_filter('${area}',${iconnum})">${i}</div>
+                <div class="area-location areabody-location${iconnum}" onclick="flowermap_filter('${area}',${i})">${array_area_location[i]}</div>
                 `
             }
 
