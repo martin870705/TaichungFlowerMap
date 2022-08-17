@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -9,6 +8,7 @@ body {
 }
 
 #banner {
+  font-family: "Poppins", sans-serif;
   position: relative;
 }
 #banner .container {

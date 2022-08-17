@@ -10,12 +10,15 @@ body .flower_img-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Noto Serif TC', serif;
 }
 body .flower_img-box h2 {
   text-align: center;
+  font-size: 24px;
 }
-body .flower_img-box img {
-  width: 350px;
+body .flower_img-box >img {
+  width: 20%;
+  margin: 80px 0px;
 }
 body .flower_img-box .choose {
   padding: 40px;
@@ -107,13 +110,13 @@ body .flower_img-box .flower-image-box #flower-box .information .flower-news .ne
 }
 body .flower_img-box .flower-image-box #flower-box .information .flower-news .news p {
   float: left;
-  width: 50px;
+  width: 60px;
   font-size: 20px;
   margin: 0px;
 }
 body .flower_img-box .flower-image-box #flower-box .information .flower-news .news span {
   float: left;
-  width: 250px;
+  width: 240px;
   text-align: justify;
 }
 body .flower_img-box .flower-image-box #flower-box .information .flower-introduce {

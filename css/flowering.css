@@ -1,14 +1,14 @@
-.flowering {
+#flowering {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.flowering .table {
+#flowering .sheet {
   border-radius: 15px;
   box-shadow: 6px 6px 10px -4px black;
   width: 80%;
-  max-width: 1400px;
+  max-width: 1300px;
   z-index: 1;
 }
 .flowering .Mountain {
