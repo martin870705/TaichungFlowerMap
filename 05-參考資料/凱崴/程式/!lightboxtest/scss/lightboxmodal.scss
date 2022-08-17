@@ -22,7 +22,7 @@
         //test2測試用，是下一個section的部分
         .test2{
             position: absolute;
-            transform: translate(0px,-20%);
+            transform: translate(0px,-22%);
             // z-index: 0;
             img{
                 width: 100%;
@@ -43,7 +43,6 @@
                 padding-top: 150px;
                 box-sizing: border-box;
                 display: flex;
-                // padding: 100px 10px 0px 10px;
                 justify-content: space-around;
 
                 // .button {
@@ -93,34 +92,41 @@
 
                         >img {
                             width: 15%;
-                            height: auto;
                         }
                         .decorate-bird {
+                            position:absolute;
+                            width:100%;
+                            height: 100%;
                             .birdbgi {
                                 position: absolute;
+                                // height: auto;
                             }
                             .bird1{
                                 left: 20%;
                                 top: 0%;
+                                width:10%;
+                                // width:20%
                                 img{
                                     width: 100%;
-                                    transform: scale(0.6);
+                                    // transform: scale(0.6);
                                 }
                             }
                             .bird2{
                                 left:30%;
-                                top:-40%;
+                                top:-50%;
+                                width:5%;
                                 img{
                                     width: 100%;
-                                    transform: scale(0.4);
+                                    // transform: scale(0.4);
                                 }
                             }
                             .bird3{
-                                right:30%;
-                                top:50%;
+                                right:35%;
+                                top:110%;
+                                width:3%;
                                 img{
                                     width: 100%;
-                                    transform: scale(0.5);
+                                    // transform: scale(0.5);
                                 }
                             }
                         }
