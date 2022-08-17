@@ -6,8 +6,16 @@ body {
   overflow-x: hidden;
 }
 body .flower_img-box {
-  height: 900px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .flower_img-box h2 {
+  text-align: center;
+}
+body .flower_img-box img {
+  width: 350px;
 }
 body .flower_img-box .choose {
   padding: 40px;
@@ -28,13 +36,16 @@ body .flower_img-box .choose select optgroup {
 }
 body .flower_img-box #icon-box {
   width: 100%;
+  height: 230px;
   display: flex;
   justify-content: center;
 }
 body .flower_img-box #icon-box #icon {
   width: 900px;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 body .flower_img-box #icon-box #icon img {
@@ -46,70 +57,86 @@ body .flower_img-box #icon-box #icon img {
 body .flower_img-box #icon-box #icon img:hover {
   transform: scale(1.1);
 }
-body .flower_img-box #flower-box .information {
+body .flower_img-box .flower-image-box {
+  display: flex;
+  height: 775px;
+  width: 100%;
+}
+body .flower_img-box .flower-image-box .bird-box {
+  width: calc((100% - 850px) / 2);
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+}
+body .flower_img-box .flower-image-box .bird-box img {
+  width: 200px;
+}
+body .flower_img-box .flower-image-box #flower-box {
+  width: 850px;
+}
+body .flower_img-box .flower-image-box #flower-box .information {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 850px;
 }
-body .flower_img-box #flower-box .information .flower-image {
+body .flower_img-box .flower-image-box #flower-box .information .flower-image {
   width: 550px;
-  height: 400px;
+  height: 470px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-body .flower_img-box #flower-box .information .flower-image img {
+body .flower_img-box .flower-image-box #flower-box .information .flower-image img {
   width: auto;
-  height: 100%;
+  height: 90%;
 }
-body .flower_img-box #flower-box .information .flower-news {
+body .flower_img-box .flower-image-box #flower-box .information .flower-news {
   width: 300px;
   padding-top: 100px;
   word-break: break-all;
 }
-body .flower_img-box #flower-box .information .flower-news h2 {
+body .flower_img-box .flower-image-box #flower-box .information .flower-news h2 {
   margin-bottom: 30px;
 }
-body .flower_img-box #flower-box .information .flower-news .news {
+body .flower_img-box .flower-image-box #flower-box .information .flower-news .news {
   display: inline-block;
   width: 300px;
   line-height: 35px;
   margin: 4px 0px;
 }
-body .flower_img-box #flower-box .information .flower-news .news p {
+body .flower_img-box .flower-image-box #flower-box .information .flower-news .news p {
   float: left;
   width: 50px;
   font-size: 20px;
   margin: 0px;
 }
-body .flower_img-box #flower-box .information .flower-news .news span {
+body .flower_img-box .flower-image-box #flower-box .information .flower-news .news span {
   float: left;
   width: 250px;
   text-align: justify;
 }
-body .flower_img-box #flower-box .information .flower-introduce {
+body .flower_img-box .flower-image-box #flower-box .information .flower-introduce {
   padding-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-body .flower_img-box #flower-box .information .flower-introduce p {
+body .flower_img-box .flower-image-box #flower-box .information .flower-introduce p {
   width: 850px;
   word-break: break-all;
   text-align: justify;
   line-height: 30px;
 }
-body .flower_img-box #flower-box .none {
+body .flower_img-box .flower-image-box #flower-box .none {
   display: none;
 }
-body .flower_img-box .girl-img img {
-  position: absolute;
-  bottom: -100px;
-  right: 0px;
-  width: 200px;
+body .flower_img-box .flower-image-box .girl-img {
+  width: calc((100% - 850px) / 2);
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
 }
-@media (max-width: 1250px) {
-  body .flower_img-box .girl-img img {
-    right: -70px;
-    width: 150px;
-  }
+body .flower_img-box .flower-image-box .girl-img img {
+  width: 200px;
 }/*# sourceMappingURL=search.css.map */
