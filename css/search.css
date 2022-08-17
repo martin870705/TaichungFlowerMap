@@ -131,6 +131,7 @@ body .flower_img-box .flower-image-box #flower-box .information .flower-introduc
   word-break: break-all;
   text-align: justify;
   line-height: 30px;
+  font-size: 18px;
 }
 body .flower_img-box .flower-image-box #flower-box .none {
   display: none;
