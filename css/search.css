@@ -11,6 +11,7 @@ body .flower_img-box {
   flex-direction: column;
   align-items: center;
   font-family: 'Noto Serif TC', serif;
+  z-index: 1;
 }
 body .flower_img-box h2 {
   text-align: center;
