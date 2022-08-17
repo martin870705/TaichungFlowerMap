@@ -38,6 +38,12 @@
   height: 1000px;
   width: 100%;
 }
+* body #lightbox-test1 .test .fa-solid {
+  background-color: #aaa;
+  color: red;
+  font-size: 50px;
+  line-height: 100px;
+}
 * body #lightbox-test1 .container {
   z-index: 1;
   width: 100%;
@@ -46,6 +52,11 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
 }
 * body #lightbox-test1 .container #map-svg {
   width: 100%;
@@ -76,14 +87,19 @@
 * body #lightbox-test1 .container #map-svg .decorate {
   width: 100%;
   position: absolute;
-  top: -50px;
+  top: -10%;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 * body #lightbox-test1 .container #map-svg .decorate > img {
   width: 15%;
+  -webkit-user-drag: none;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird {
   position: absolute;
@@ -92,30 +108,47 @@
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .birdbgi {
   position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 {
-  left: 20%;
-  top: 0%;
-  width: 10%;
+  left: 17%;
+  top: 42%;
+  width: 6%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 img {
+  -webkit-user-drag: none;
   width: 100%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 {
   left: 30%;
-  top: -50%;
-  width: 5%;
+  top: -10%;
+  width: 4%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 img {
+  -webkit-user-drag: none;
   width: 100%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 {
   right: 35%;
-  top: 110%;
-  width: 3%;
+  top: 100%;
+  width: 2%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 img {
+  -webkit-user-drag: none;
   width: 100%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-taichungflower {
+  position: absolute;
+  top: 330%;
+  width: 100%;
+}
+* body #lightbox-test1 .container #map-svg .decorate .decorate-taichungflower img {
+  width: 30%;
+  position: absolute;
+  right: 5%;
 }
 * body #lightbox-test1 .container .modal {
   display: none;

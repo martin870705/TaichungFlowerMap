@@ -114,7 +114,7 @@ fetch('./json/flower_data.json')//進網站就將所有花資料生成好並隱�
                             <img src="${flower.flower_img}" alt="${flower.flower_name}">
                         </div>
                         <div class="flower-news">
-                            <h2>${flower.flower_name}</h2>
+                            <h3>${flower.flower_name}</h3>
                             <div class="news">
                                 <p>花語 | </p>
                                 <span>${flower.flower_language}</span>
