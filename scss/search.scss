@@ -1,0 +1,185 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+    #search {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Noto Serif TC', serif;
+  z-index: 1;
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        &>img {
+            width: 15%;
+  margin: 80px 0px;
+        }
+
+        .choose {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+
+            select {
+                width: 220px;
+                margin: 0px 45px;
+                height: 50px;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 16px;
+
+                optgroup {
+                    color: white;
+                    background-color: cadetblue;
+                }
+            }
+
+           
+        }
+
+        #icon-box {
+            width: 100%;
+            height: 230px;
+            display: flex;
+            justify-content: center;
+
+            #icon {
+                width: 900px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                img {
+                    width: 60PX;
+                    margin: 0PX 10PX;
+                    cursor: pointer;
+                    margin-bottom: 25px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .flower-image-box {
+            display: flex;
+            height: 775px;
+            width: 100%;
+
+            .bird-box {
+                width: calc(calc(100% - 850px) / 2);
+                justify-content: center;
+                display: flex;
+                align-items: flex-start;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            #flower-box {
+                width: 850px;
+                .information {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 850px;
+
+                    .flower-image {
+                        width: 550px;
+                        height: 470px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: auto;
+                            height: 90%;
+                        }
+
+                    }
+
+                    .flower-news {
+                        width: 300px;
+                        padding-top: 100px;
+                        word-break: break-all;
+
+                        h2 {
+                            margin-bottom: 30px;
+                        }
+
+                        .news {
+                            display: inline-block;
+                            width: 300px;
+                            line-height: 35px;
+                            margin: 4px 0px;
+
+                            p {
+                                float: left;
+                                width: 60px;
+                                font-size: 20px;
+                                margin: 0px;
+                            }
+
+                            span {
+                                float: left;
+                                width: 240px;
+                                text-align: justify;
+                                
+
+                            }
+                        }
+                    }
+
+                    .flower-introduce {
+                        padding-top: 40px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        p {
+                            width: 850px;
+                            word-break: break-all;
+                            text-align: justify;
+                            line-height: 30px;
+                            font-size: 18px;
+                        }
+                    }
+
+                }
+
+                .none {
+                    display: none;
+                }
+
+            }
+
+            .girl-img {
+                width: calc(calc(100% - 850px) / 2);
+
+                justify-content: center;
+                display: flex;
+                align-items: flex-end;
+
+                img {
+
+                    width: 200px;
+
+
+                }
+            }
+        }
+
+    }
+}

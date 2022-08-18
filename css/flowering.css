@@ -1,12 +1,23 @@
 #flowering {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
   padding-top: 12%;
   z-index: 0;
 }
-#flowering .sheet {
+#flowering .text {
+  display: flex;
+  justify-content: center;
+}
+#flowering .text h2 {
+  width: 80%;
+  max-width: 1300px;
+  z-index: 2;
+}
+#flowering .flowering {
+  display: flex;
+  justify-content: center;
+}
+#flowering .flowering .sheet {
   border-radius: 15px;
   box-shadow: 6px 6px 10px -4px black;
   width: 80%;
@@ -16,18 +27,19 @@
 #flowering .mountain {
   position: absolute;
   width: 100%;
-  top: 0px;
+  top: 0%;
   z-index: 1;
-}/*# sourceMappingURL=flowering.css.map */
-#flowering .sky{
+}
+#flowering .sky {
   position: absolute;
   width: 100%;
-  top: -50%;
+  top: -68%;
+  z-index: 0;
 }
-#flowering .sun{
+#flowering .sun {
   position: absolute;
-  width: 18%;
-  top: -32%;
-  right: 14%;
+  width: 14%;
+  top: -23%;
+  right: 15%;
   z-index: 1;
-}
+}/*# sourceMappingURL=flowering.css.map */

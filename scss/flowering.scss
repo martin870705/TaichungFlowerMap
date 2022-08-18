@@ -1,0 +1,52 @@
+#flowering {
+    position: relative;
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    padding-top: 12%;
+    z-index: 0;
+    .text{
+        display: flex;
+        justify-content: center;
+        h2{
+            width: 80%;
+            max-width: 1300px;
+            z-index: 2;
+        }
+    }
+
+    .flowering{
+        display: flex;
+        justify-content: center;
+
+        .sheet {
+            border-radius: 15px;
+            box-shadow: 6px 6px 10px -4px black;
+            width: 80%;
+            max-width: 1300px;
+            z-index: 2;
+        }
+    }
+
+    .mountain {
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        z-index: 1;
+    }
+
+    .sky {
+        position: absolute;
+        width: 100%;
+        top: -68%;
+        z-index: 0;
+    }
+
+    .sun{
+        position: absolute;
+        width: 14%;
+        top: -23%;
+        right: 15%;
+        z-index: 1;
+    }
+}
