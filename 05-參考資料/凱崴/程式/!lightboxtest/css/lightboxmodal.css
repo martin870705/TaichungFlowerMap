@@ -154,7 +154,7 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 80px;
+  padding-top: 15vh;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -180,12 +180,12 @@
   cursor: pointer;
 }
 * body #lightbox-test1 .container .modal .modal-content {
+  height: calc(100% - 0vh);
   width: 100%;
-  height: calc(100% - 80px);
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody {
-  width: 90%;
-  height: 100%;
+  width: 70%;
+  height: calc(100% - 15vh);
   position: relative;
   background-color: #ffa;
   margin: auto;
@@ -283,9 +283,29 @@
   display: flex;
   justify-content: start;
   padding: 0px 50px;
+  align-items: center;
+  background-color: #ACC8CC;
+  font-size: 14px;
+  font-size: 14px;
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location {
-  width: 100px;
-  background-color: pink;
-  border: 1px solid black;
+  padding: 0px 5px;
+  border-radius: 10px;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 2px white solid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location:hover {
+  background-color: #5580a4;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=lightboxmodal.css.map */

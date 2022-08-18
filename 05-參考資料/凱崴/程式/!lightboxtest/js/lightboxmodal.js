@@ -1,23 +1,23 @@
 function openModal() {
     document.getElementById("myModal").style.display = "block";
     //因為position fixed會打架所以直接拔掉nav的按鈕
-    document.querySelector('#banner .ham').style.display="none";
-    document.querySelector('#banner .catalog').style.display="none";
+    // document.querySelector('#banner .ham').style.display="none";
+    // document.querySelector('#banner .catalog').style.display="none";
 }
 
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
-        //恢復按鈕
-    document.querySelector('#banner .ham').style.display="block";
-    document.querySelector('#banner  .catalog').style.display="block";
+    //恢復按鈕
+    // document.querySelector('#banner .ham').style.display="block";
+    // document.querySelector('#banner  .catalog').style.display="block";
 }
 
 function plusSlides(n) {
-    const pics=document.querySelectorAll('#afps .afps-img')
-    for(let i=0;i<pics.length;i++){
-        if(pics[i].classList.contains('afps-img-active')){
+    const pics = document.querySelectorAll('#afps .afps-img')
+    for (let i = 0; i < pics.length; i++) {
+        if (pics[i].classList.contains('afps-img-active')) {
             pics[i].classList.remove('afps-img-active');
-            let nextactive=(i+pics.length+n)%(pics.length);
+            let nextactive = (i + pics.length + n) % (pics.length);
             pics[nextactive].classList.add('afps-img-active');
             break;
             // console.log(pic)
@@ -37,16 +37,16 @@ function plusSlides(n) {
     // });
 }
 
-const areas =document.querySelectorAll('#map-svg .area-hover-effect');
+const areas = document.querySelectorAll('#map-svg .area-hover-effect');
 console.log(areas)
-areas.forEach(function(area,num) {
-    area.addEventListener('click',function(){
+areas.forEach(function (area, num) {
+    area.addEventListener('click', function () {
         openModal();
-        let areaname=area.getAttribute("data-areaname");
+        let areaname = area.getAttribute("data-areaname");
         //有順利抓到attribute裡面藏的資料
         // console.log(areaname);
         // console.log(typeof(areaname));
-        flowermap_filter(areaname,0);
+        flowermap_filter(areaname, 0);
     })
 });
 
@@ -66,21 +66,20 @@ btns.forEach(function (btn, num) {
 });
 
 
-
-fetch('./臺中市賞花景點.json')
-.then(function (response) {
-    return response.json();
-})
-.then(function(mydata){
-    const afps_img = document.getElementById('afps');
-    for(let i=0;i<mydata.length;i++){
-        afps_img.innerHTML+=`
+fetch('./json/臺中市賞花景點.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (mydata) {
+        const afps_img = document.getElementById('afps');
+        for (let i = 0; i < mydata.length; i++) {
+            afps_img.innerHTML += `
         <img src="${mydata[i].locationpic}" alt="" class="afps-img afps-img0 afps-img-active">
         `
-    }  
-    afps_img.textContent='';
-    console.log('testya');
-})
+        }
+        afps_img.textContent = '';
+        console.log('testya');
+    })
 
 
 
@@ -97,27 +96,76 @@ function flowermap_filter(area, index) {
     //先將圖片區都清掉
     afps_img.textContent = ` `;
     //將左右的按鈕復原
-    afps_img.innerHTML += `
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    `;
+    // afps_img.innerHTML += `
+    // <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    // <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    // `;
     //=======================圖片區end===================================================
 
     //=======================說明區start===================================================
-    const afd_text = document.getElementById('afd');
+    const afd = document.getElementById('afd');
     console.log(afd);
     // 清空內容
-    afd_text.textContent = ` `;
+    afd.textContent = ``;
+    afd.innerHTML += ` 
+    <div class="areabody-flower-description" id="afd">
+    <div class="afd-title" id="afd-title">
+      <div class="afd-title-location"></div> 
+    </div>
+    <div class="afd-content" id="afd-content">
+      <div class="afd-content-name-address-block">
+        <div class="name"></div>
+        <div class="icon-text">
+          <div class="icon"></div>
+          <div class="address"></div>
+        </div>
+      </div>
+      <div class="afd-content-type-map-block">
+        <div class="icon-text">
+          <div class="icon"></div>
+          <div class="type"></div>
+        </div>
+        <a href="" id="afd-map-href">
+            <div class="map-block">
+                <div class="icon-text">
+                     <div class="icon"></div>
+                     <div class="waytogo">導航怎麼去 Go!</div>
+                 </div>
+             </div>
+        </a>
+      </div>
+      <div class="afd-content-weathercard-block">
+        
+      </div>
+    </div>
+  </div>
+    `;
     //=======================說明區end===================================================
 
     //=======================地點區start===================================================
     const ali_block = document.getElementById('ali');
     console.log(ali);
-    ali_block.textContent = ` `;
+    ali_block.textContent = `
+        
+    `;
     //=======================地點區end===================================================
+    //其他
+    const weathercard_block = document.querySelector('#afd-content .afd-content-weathercard-block');
+    console.log(weathercard_block);
+    const afd_title_text = document.querySelector('#afd-title .afd-title-location');
+    console.log(afd_title_text);
+    const afd_locationname = document.querySelector('#afd-content .afd-content-name-address-block .name');
+    console.log(afd_locationname);
+    const afd_locationaddress = document.querySelector('#afd-content .afd-content-name-address-block .icon-text .address')
+    console.log(afd_locationaddress);
+    const afd_flowertype = document.querySelector('#afd-content .afd-content-type-map-block');
+    console.log(afd_flowertype);
+    const afd_map_href=document.querySelector('#afd-map-href');
+    console.log(afd_map_href);
+    
 
 
-    fetch('./臺中市賞花景點.json')
+    fetch('./json/臺中市賞花景點.json')
         .then(function (response) {
             return response.json();
         })
@@ -162,10 +210,16 @@ function flowermap_filter(area, index) {
 
             if (array_imgsrc.length == 1) {
                 //只有一張圖的話這邊就不需要左右的按鈕了,所以重置一次areabody-flower-pic-swiper區塊
-                afps_img.textContent = ` `;
+                // afps_img.textContent = ` `;
+            }
+            else {
+                afps_img.innerHTML += `
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                `;
             }
             // 依序插入圖片
-            afps_img.innerHTML+=`
+            afps_img.innerHTML += `
             <img src="${array_imgsrc[0]}" alt="" class="afps-img afps-img0 afps-img-active">
             `
             for (let i = 1; i < array_imgsrc.length; i++) {
@@ -174,33 +228,45 @@ function flowermap_filter(area, index) {
                 `
             }
             //插入該地點介紹
-            afd_text.innerHTML += `
-            <ul>
-            <li>
-                 <div class="afd_li_title">行政區:</div>
-                 <div class="afd_li_content">${area}</div>
-            </li>
-            <li>
-                <div class="afd_li_title">地點:</div>
-                 <div class="afd_li_content">${string_locationname}</div>
-            </li>
-            <li>
-                <div class="afd_li_title">地址</div>
-                <div class="afd_li_content">${string_locationaddress}</div>
-            </li>
-            <li>
-                <div class="afd_li_title">花種:</div>
-                <div class="afd_li_content">${array_flowertype}</div>
-            </li>
-            </ul>
-            `;
+            // afd.innerHTML += `
+            // <ul>
+            // <li>
+            //      <div class="afd_li_title">行政區:</div>
+            //      <div class="afd_li_content">${area}</div>
+            // </li>
+            // <li>
+            //     <div class="afd_li_title">地點:</div>
+            //      <div class="afd_li_content">${string_locationname}</div>
+            // </li>
+            // <li>
+            //     <div class="afd_li_title">地址</div>
+            //     <div class="afd_li_content">${string_locationaddress}</div>
+            // </li>
+            // <li>
+            //     <div class="afd_li_title">花種:</div>
+            //     <div class="afd_li_content">${array_flowertype}</div>
+            // </li>
+            // </ul>
+            // `;
+
+        })
+
+    fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-073?Authorization=CWB-4305977E-C979-416B-B5F0-7A4C2C7CBABA&format=JSON')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (mydata) {
+            // console.log('testbbb');
+            // console.log(mydata);
+            // console.log('testaaa');
+            // console.log(afd);
         })
 }
 
 
 //測試圖片是否皆為有效連結用
 function imgtest() {
-    fetch('./臺中市賞花景點.json')
+    fetch('./json/臺中市賞花景點.json')
         .then(function (response) {
             return response.json();
         })
@@ -215,15 +281,18 @@ function imgtest() {
         })
 }
 
+
+//測試台中未來兩天天氣api是否正確抓取
 //台中各區氣象資訊 https://opendata.cwb.gov.tw/dataset/warning/F-C0032-021
 //https://opendata.cwb.gov.tw/opendatadoc/MFC/A0012-001.pdf   說明文件
-function weatherfetchtest(){
-    fetch('http://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-073?Authorization=CWB-4305977E-C979-416B-B5F0-7A4C2C7CBABA&format=JSON')
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(mydata){
-        console.log(mydata);
-        console.log('testaaa');
-    })
+function weatherfetchtest() {
+    fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-073?Authorization=CWB-4305977E-C979-416B-B5F0-7A4C2C7CBABA&format=JSON')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (mydata) {
+            console.log('testbbb');
+            console.log(mydata);
+            console.log('testaaa');
+        })
 }
