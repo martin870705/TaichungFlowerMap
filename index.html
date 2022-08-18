@@ -29,7 +29,7 @@
             position: relative;
             background-color: white;
         }
-        .hbtn {
+        /* .hbtn {
         position: absolute;
         box-sizing: border-box;
         display: inline-block;
@@ -92,7 +92,7 @@
       }
       .br1{
         display: block;
-      }
+      } */
       /* li{
         transition: all .5s;
         border-bottom: 1px solid rgb(255, 255, 255);
@@ -107,13 +107,13 @@
 <body>
     <header>
         <!--封面-->
-        <audio  loop width="500px" id="jojo" width="500px" style="display: none">
+        <audio class="music"  loop width="500px" id="jojo" width="500px" style="display: none">
             <source src="./img/vedio/ScreenRecorderProject1_1.mp3" type="audio/mpeg" />
         </audio>
         <div id="banner">
             <div class="container">
-                <a href="#" onclick="playVid()" class="hbtn hb-border-bottom-br3 br2"><i class="fa-solid fa-volume-high"></i></a>
-                <a href="#" onclick="pauseVid()" class="hbtn hb-border-bottom-br3 br"><i class="fa-solid fa-volume-xmark"></i></a>
+                <div  onclick="playVid()" class="hbtn hb-border-bottom start"><i class="fa-solid fa-volume-high"></i></div>
+                <div  onclick="pauseVid()" class="hbtn hb-border-bottom stop"><i class="fa-solid fa-volume-xmark"></i></div>
                 <div class="title">
                     <h1 class="title-1">TAICHUNG</h1>
                     <h2 class="title-2">Flower Map</h2>
@@ -3423,11 +3423,14 @@
         const content = document.querySelector(".content")
         const flat = document.querySelector(".flat")
         const flat_mid = document.querySelector(".flat-mid")
-        var audio = document.getElementById("jojo");
-        var ran = document.getElementById("range");
-        var pro = document.getElementById("pro");
-        var br = document.querySelector('.br')
-        var br2 = document.querySelector('.br2')
+        const audio = document.getElementById("jojo");
+        const ran = document.getElementById("range");
+        const pro = document.getElementById("pro");
+        const start = document.querySelector('.start')
+        const stop = document.querySelector('.stop')
+        const music = document.querySelector('.music')
+        
+        // const hbtn = document.querySelector('.hbtn')
         let i = 0;
         let k = 0;
         ham.addEventListener("click", function () {
@@ -3487,15 +3490,22 @@
         // 暂停
       function pauseVid() {
         audio.pause();
-        br.classList.remove('br1')
-        br2.classList.remove('br5')
+        start.classList.remove('start-none');
+        stop.classList.remove('stop-block');
       }
       //开始
       function playVid() {
         audio.play();
-        br.classList.add('br1')
-        br2.classList.add('br5')
+        start.classList.add('start-none');
+        stop.classList.add('stop-block');
+       
+        //預設值 音量 0.0 ~ 1.0 
+        music.volume = 1.0;
       }
+     
+    </script>
+    <script>
+    
     </script>
 </body>
 
