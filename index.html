@@ -19,24 +19,101 @@
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/lightboxmodal.css">
     <link rel="stylesheet" href="./css/imgList.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <style>
 
         *{
             -webkit-user-drag: none;
         }
-        main {
+        main ,footer{
             position: relative;
             background-color: white;
         }
+        /* .hbtn {
+        position: absolute;
+        box-sizing: border-box;
+        display: inline-block;
+        overflow: hidden;
+        padding: 8px 20px;
+        margin: 0px 3px 6px;
+        text-align: center;
+        border: 2px solid rgb(255, 255, 255);
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        z-index: 0;
+        letter-spacing: 2px;
+        color: black;
+        z-index: 2;
+        top: 40%;
+        left: -35%;
+        color: white;
+      }
+
+      .hb-border-bottom-br3 {
+        position: relative;
+        transition-duration: 0.3s;
+        overflow: visible;
+        box-sizing: border-box;
+        border: none;
+        padding: 10px 22px;
+        z-index: 5;
+      }
+
+      .hb-border-bottom-br3::after {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        border: 2px solid rgb(255, 255, 255);
+        z-index: 2;
+        margin: 0px;
+        left: 0px;
+        bottom: 0px;
+        border-top-width: 2px;
+        transition: border-top-width 0.1s ease 0.2s, height 0.2s ease 0.1s,
+          width 0.2s ease 0s, margin 0.2s ease 0s;
+      }
+
+      .hb-border-bottom-br3:hover::after {
+        width: 60%;
+        height: 0px;
+        border-width: 0px 2px 2px;
+        margin: 0px 20%;
+        transition: border-top-width 0.1s ease 0s, height 0.2s ease 0.1s,
+          width 0.2s ease 0.2s, margin 0.2s ease 0.2s;
+      }
+      .br{
+        display: none;
+      }
+      .br5{
+        display: none;
+      }
+      .br1{
+        display: block;
+      } */
+      /* li{
+        transition: all .5s;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        width: 0%;
+      }
+      ul:hover .li-1{
+        width: 100%;
+      } */
     </style>
 </head>
 
 <body>
     <header>
         <!--封面-->
-
+        <audio class="music"  loop width="500px" id="jojo" width="500px" style="display: none">
+            <source src="./img/vedio/ScreenRecorderProject1_1.mp3" type="audio/mpeg" />
+        </audio>
         <div id="banner">
             <div class="container">
+                <div  onclick="playVid()" class="hbtn hb-border-bottom start"><i class="fa-solid fa-volume-high"></i></div>
+                <div  onclick="pauseVid()" class="hbtn hb-border-bottom stop"><i class="fa-solid fa-volume-xmark"></i></div>
                 <div class="title">
                     <h1 class="title-1">TAICHUNG</h1>
                     <h2 class="title-2">Flower Map</h2>
@@ -69,7 +146,7 @@
                     </div>
                 </div>
                 <video autoplay muted loop>
-                    <source src="./img/video/Topic.mp4" type="video/mp4">
+                    <source src="./img/vedio/Topic (1).mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -3318,7 +3395,22 @@
         <!--網美圖-->
     </main>
     <footer>
-        
+        <div id="footer">
+            
+            <div class="text">
+                    <img src="./img/程式用圖區/title-關於我們ˊ@2x.png" alt="">
+                        <p>
+                            我們是一群學習前端技術的職訓培訓班學生，希望藉由這個網站提供台中的賞花資訊。
+                        </p> 
+
+                    <p>資料來源皆來自網路，如有任何資訊誤植、照片侵權等相關問題，請來信告知，謝謝！</p>
+                </div>
+                <div class="bottom-text">
+                    <p>僅供學習用途，如有侵權請來信告知。</p>
+                    <p>台中賞花地圖　－　COPYRIGHT©2022　－　Dsigned by　肝臟沙沙給油！</p>
+
+                </div>
+            </div>
     </footer>
     <!--結尾-->
 
@@ -3331,6 +3423,14 @@
         const content = document.querySelector(".content")
         const flat = document.querySelector(".flat")
         const flat_mid = document.querySelector(".flat-mid")
+        const audio = document.getElementById("jojo");
+        const ran = document.getElementById("range");
+        const pro = document.getElementById("pro");
+        const start = document.querySelector('.start')
+        const stop = document.querySelector('.stop')
+        const music = document.querySelector('.music')
+        
+        // const hbtn = document.querySelector('.hbtn')
         let i = 0;
         let k = 0;
         ham.addEventListener("click", function () {
@@ -3386,6 +3486,26 @@
 
             }
         })
+
+        // 暂停
+      function pauseVid() {
+        audio.pause();
+        start.classList.remove('start-none');
+        stop.classList.remove('stop-block');
+      }
+      //开始
+      function playVid() {
+        audio.play();
+        start.classList.add('start-none');
+        stop.classList.add('stop-block');
+       
+        //預設值 音量 0.0 ~ 1.0 
+        music.volume = 1.0;
+      }
+     
+    </script>
+    <script>
+    
     </script>
 </body>
 

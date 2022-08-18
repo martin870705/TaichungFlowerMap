@@ -16,6 +16,7 @@ body #search {
 body #search h2 {
   text-align: center;
   font-size: 24px;
+  letter-spacing: 7px;
 }
 body #search > img {
   width: 15%;
