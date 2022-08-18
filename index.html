@@ -29,15 +29,91 @@
             position: relative;
             background-color: white;
         }
+        .hbtn {
+        position: absolute;
+        box-sizing: border-box;
+        display: inline-block;
+        overflow: hidden;
+        padding: 8px 20px;
+        margin: 0px 3px 6px;
+        text-align: center;
+        border: 2px solid rgb(255, 255, 255);
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        z-index: 0;
+        letter-spacing: 2px;
+        color: black;
+        z-index: 2;
+        top: 40%;
+        left: -35%;
+        color: white;
+      }
+
+      .hb-border-bottom-br3 {
+        position: relative;
+        transition-duration: 0.3s;
+        overflow: visible;
+        box-sizing: border-box;
+        border: none;
+        padding: 10px 22px;
+        z-index: 5;
+      }
+
+      .hb-border-bottom-br3::after {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        border: 2px solid rgb(255, 255, 255);
+        z-index: 2;
+        margin: 0px;
+        left: 0px;
+        bottom: 0px;
+        border-top-width: 2px;
+        transition: border-top-width 0.1s ease 0.2s, height 0.2s ease 0.1s,
+          width 0.2s ease 0s, margin 0.2s ease 0s;
+      }
+
+      .hb-border-bottom-br3:hover::after {
+        width: 60%;
+        height: 0px;
+        border-width: 0px 2px 2px;
+        margin: 0px 20%;
+        transition: border-top-width 0.1s ease 0s, height 0.2s ease 0.1s,
+          width 0.2s ease 0.2s, margin 0.2s ease 0.2s;
+      }
+      .br{
+        display: none;
+      }
+      .br5{
+        display: none;
+      }
+      .br1{
+        display: block;
+      }
+      /* li{
+        transition: all .5s;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        width: 0%;
+      }
+      ul:hover .li-1{
+        width: 100%;
+      } */
     </style>
 </head>
 
 <body>
     <header>
         <!--封面-->
-
+        <audio  loop width="500px" id="jojo" width="500px" style="display: none">
+            <source src="./img/vedio/ScreenRecorderProject1_1.mp3" type="audio/mpeg" />
+        </audio>
         <div id="banner">
             <div class="container">
+                <a href="#" onclick="playVid()" class="hbtn hb-border-bottom-br3 br2"><i class="fa-solid fa-volume-high"></i></a>
+                <a href="#" onclick="pauseVid()" class="hbtn hb-border-bottom-br3 br"><i class="fa-solid fa-volume-xmark"></i></a>
                 <div class="title">
                     <h1 class="title-1">TAICHUNG</h1>
                     <h2 class="title-2">Flower Map</h2>
@@ -70,7 +146,7 @@
                     </div>
                 </div>
                 <video autoplay muted loop>
-                    <source src="./img/video/Topic.mp4" type="video/mp4">
+                    <source src="./img/vedio/Topic (1).mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -3347,6 +3423,11 @@
         const content = document.querySelector(".content")
         const flat = document.querySelector(".flat")
         const flat_mid = document.querySelector(".flat-mid")
+        var audio = document.getElementById("jojo");
+        var ran = document.getElementById("range");
+        var pro = document.getElementById("pro");
+        var br = document.querySelector('.br')
+        var br2 = document.querySelector('.br2')
         let i = 0;
         let k = 0;
         ham.addEventListener("click", function () {
@@ -3402,6 +3483,19 @@
 
             }
         })
+
+        // 暂停
+      function pauseVid() {
+        audio.pause();
+        br.classList.remove('br1')
+        br2.classList.remove('br5')
+      }
+      //开始
+      function playVid() {
+        audio.play();
+        br.classList.add('br1')
+        br2.classList.add('br5')
+      }
     </script>
 </body>
 
