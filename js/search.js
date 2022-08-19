@@ -34,7 +34,7 @@ for (let i = 1; i < 13; i++) {//生成月份
     choose_mouth.innerHTML += `<option>${i}月</option>`
 }
 
-fetch('./json/flower_data.json')
+fetch('./js/json/flower_data.json')
     .then(function (respomse) {
         return respomse.json()
     }).then(function (flowers) {
@@ -102,7 +102,7 @@ fetch('./json/flower_data.json')
         })
     })
 
-fetch('./json/flower_data.json')//進網站就將所有花資料生成好並隱藏
+fetch('./js/json/flower_data.json')//進網站就將所有花資料生成好並隱藏
     .then(function (respomse) {
         return respomse.json()
     }).then(function (flowers) {
