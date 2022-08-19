@@ -170,11 +170,16 @@ body #search .flower-image-box #flower-box .information .flower-introduce p {
 }
 @media (max-width: 1024px) {
   body #search .flower-image-box #flower-box .information .flower-introduce {
-    padding: 0px 20px;
+    padding: 0px;
   }
 }
 body #search .flower-image-box #flower-box .none {
   display: none;
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box #flower-box {
+    padding: 0px 20px;
+  }
 }
 body #search .flower-image-box .girl-img {
   width: calc((100% - 850px) / 2);
@@ -207,7 +212,7 @@ body #search .flower-image-box .girl-img .bird {
 }
 @media (max-width: 1024px) {
   body #search .flower-image-box {
-    height: auto;
+    height: 600px;
     flex-wrap: wrap;
   }
 }/*# sourceMappingURL=search.css.map */

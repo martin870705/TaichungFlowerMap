@@ -9,7 +9,7 @@ body {
         flex-direction: column;
         align-items: center;
         font-family: 'Noto Serif TC', serif;
-  z-index: 1;
+        z-index: 1;
 
         h2 {
             text-align: center;
@@ -106,6 +106,7 @@ body {
             #flower-box {
                 width: 100%;
                 max-width: 850px;
+                
                 .information {
                     display: flex;
                     justify-content: center;
@@ -182,7 +183,7 @@ body {
                             font-size: 18px;
                         }
                         @media (max-width:1024px) {
-                            padding: 0px 20px;
+                            padding: 0px;
                         }
                     }
 
@@ -190,6 +191,9 @@ body {
 
                 .none {
                     display: none;
+                }
+                @media (max-width:1024px) {
+                    padding: 0px 20px;
                 }
 
             }
@@ -221,7 +225,7 @@ body {
                 
             }
             @media (max-width:1024px) {
-                height: auto;
+                height: 600px;
                 flex-wrap: wrap;
             }
         }
