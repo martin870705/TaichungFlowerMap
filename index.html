@@ -126,22 +126,23 @@
                 <div class="catalog">
                     <div class="content">
                         <ul>
-                            <li>
-                                about
-                            </li>
-                            <li>
-                                about
-                            </li>
-                            <li>
-                                about
-                            </li>
-                            <li>
-                                about
-                            </li>
-                            <li>
-                                about
-                            </li>
+                            <a href="#banner"><li>
+                                回到頁首
+                            </li></a>
 
+                            <a href="#lightbox-test1"><li>
+                                台中賞花地圖
+                            </li></a>
+                            
+                            <a href="#search"><li>
+                                花卉介紹
+                            </li></a>
+                            <a href="#imgList"><li>
+                                拍照苦守救星
+                            </li></a>
+                            <a href="#footer"><li>
+                                關於我們
+                            </li></a>
                         </ul>
                     </div>
                 </div>
@@ -3424,6 +3425,7 @@
         const content = document.querySelector(".content")
         const flat = document.querySelector(".flat")
         const flat_mid = document.querySelector(".flat-mid")
+        const btn = document.querySelector(".hb-border-bottom");
         const audio = document.getElementById("jojo");
         const ran = document.getElementById("range");
         const pro = document.getElementById("pro");
@@ -3442,6 +3444,7 @@
                 flat.classList.add('rotate-1')
                 flat.classList.add('rotate-2')
                 flat_mid.classList.remove('slow')
+                btn.style.zIndex ='2';
                 i++
             } else {
 
@@ -3450,32 +3453,59 @@
                 flat_mid.classList.remove('none')
                 flat.classList.remove('rotate-1')
                 flat.classList.remove('rotate-2')
+                btn.style.zIndex ='3';
                 i = 0;
             }
 
         })
         // function open(a){
-            //   ham.classList.add('black')
-            // }    
+
+        //   ham.classList.add('black')
+        // }
+        if(ham.offsetTop == 14){
+            console.log(ham.offsetTop);
             window.addEventListener("scroll", function () {
                 //   console.log(scrollY);
-            if (window.scrollY >= 436) {
-                flat_mid.classList.remove('slow')
-                flat.classList.add('black2')
-                flat_mid.classList.add('black2')
+                if (window.scrollY >= 933) {
+                    flat_mid.classList.remove('slow')
+                    flat.classList.add('black2')
+                    flat_mid.classList.add('black2')
+    
+    
+                    //   ham.addEventListener('click',function(){
+                    //     if(window.scrollY >= 436 && content.classList.contains('block')){
+                    //         flat.classList.remove('black2')
+                    //     }
+                    //       }) 
+                }
+                else if (window.scrollY < 933) {
+                    flat.classList.remove('black2')
+                    flat_mid.classList.remove('black2')
+                }
+            })
+        } else {
+            console.log(ham.offsetTop);
+            window.addEventListener("scroll", function () {
+                //   console.log(scrollY);
+                if (window.scrollY >= 436) {
+                    flat_mid.classList.remove('slow')
+                    flat.classList.add('black2')
+                    flat_mid.classList.add('black2')
+    
+    
+                    //   ham.addEventListener('click',function(){
+                    //     if(window.scrollY >= 436 && content.classList.contains('block')){
+                    //         flat.classList.remove('black2')
+                    //     }
+                    //       }) 
+                }
+                else if (window.scrollY < 436) {
+                    flat.classList.remove('black2')
+                    flat_mid.classList.remove('black2')
+                }
+            })
+        }  
 
-
-                //   ham.addEventListener('click',function(){
-                //     if(window.scrollY >= 436 && content.classList.contains('block')){
-                //         flat.classList.remove('black2')
-                //     }
-                //       }) 
-            }
-            else if (window.scrollY < 436) {
-                flat.classList.remove('black2')
-                flat_mid.classList.remove('black2')
-            }
-        })
         console.log(ham);
         ham.addEventListener('click', function () {
             console.log(flat);
