@@ -14,11 +14,22 @@ body #search {
 body #search h2 {
   text-align: center;
   font-size: 24px;
+  margin: 0px;
 }
 body #search > img {
   width: 15%;
-  min-width: 200px;
+  min-width: 180px;
   margin: 80px 0px;
+}
+@media (max-width: 1024px) {
+  body #search > img {
+    margin: 65px 0px;
+  }
+}
+@media (max-width: 539px) {
+  body #search > img {
+    margin: 30px 0px 25px 0px;
+  }
 }
 body #search .choose {
   padding: 40px 0px;
@@ -37,10 +48,32 @@ body #search .choose select optgroup {
   color: white;
   background-color: cadetblue;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .choose select {
-    margin: 15px;
-    width: 150px;
+    margin: 0px 30px;
+    width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  body #search .choose select {
+    margin: 0px 15px;
+    width: 130px;
+  }
+}
+@media (max-width: 539px) {
+  body #search .choose select {
+    margin: 5px 0px;
+    width: 130px;
+  }
+}
+@media (max-width: 1023px) {
+  body #search .choose {
+    padding: 20px 0px;
+  }
+}
+@media (max-width: 539px) {
+  body #search .choose {
+    flex-direction: column;
   }
 }
 body #search #icon-box {
@@ -69,14 +102,27 @@ body #search #icon-box #icon img {
 body #search #icon-box #icon img:hover {
   transform: scale(1.1);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search #icon-box #icon img {
     width: 50PX;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 539px) {
+  body #search #icon-box #icon img {
+    width: 56PX;
+    margin: 0px 7.5px 20px 7.5px;
+  }
+}
+@media (max-width: 1023px) {
   body #search #icon-box {
     height: 300px;
+    padding: 0px 15px;
+  }
+}
+@media (max-width: 539px) {
+  body #search #icon-box {
+    height: auto;
+    padding: 0px 7.5px;
   }
 }
 body #search .flower-image-box {
@@ -93,6 +139,11 @@ body #search .flower-image-box .bird-box {
 }
 body #search .flower-image-box .bird-box img {
   width: 200px;
+}
+@media (max-width: 539px) {
+  body #search .flower-image-box .bird-box {
+    display: none;
+  }
 }
 body #search .flower-image-box #flower-box {
   width: 100%;
@@ -115,12 +166,12 @@ body #search .flower-image-box #flower-box .information .flower-image img {
   width: auto;
   height: 90%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box #flower-box .information .flower-image img {
     height: 100%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box #flower-box .information .flower-image {
     height: 330px;
     width: 375px;
@@ -151,9 +202,25 @@ body #search .flower-image-box #flower-box .information .flower-news .news span 
   width: 240px;
   text-align: justify;
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
+  body #search .flower-image-box #flower-box .information .flower-news .news span {
+    width: calc(100% - 60px);
+  }
+}
+@media (max-width: 767px) {
+  body #search .flower-image-box #flower-box .information .flower-news .news {
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
   body #search .flower-image-box #flower-box .information .flower-news {
     padding-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  body #search .flower-image-box #flower-box .information .flower-news {
+    padding-top: 0px;
+    width: 250px;
   }
 }
 body #search .flower-image-box #flower-box .information .flower-introduce {
@@ -168,7 +235,7 @@ body #search .flower-image-box #flower-box .information .flower-introduce p {
   line-height: 30px;
   font-size: 18px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box #flower-box .information .flower-introduce {
     padding: 0px;
   }
@@ -176,9 +243,14 @@ body #search .flower-image-box #flower-box .information .flower-introduce p {
 body #search .flower-image-box #flower-box .none {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box #flower-box {
-    padding: 0px 20px;
+    padding: 0px 25px;
+  }
+}
+@media (max-width: 539px) {
+  body #search .flower-image-box #flower-box {
+    padding: 0px 14px;
   }
 }
 body #search .flower-image-box .girl-img {
@@ -210,9 +282,25 @@ body #search .flower-image-box .girl-img .bird {
     justify-content: flex-end;
   }
 }
+@media (max-width: 539px) {
+  body #search .flower-image-box .girl-img {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   body #search .flower-image-box {
     height: 600px;
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  body #search .flower-image-box {
+    height: 960px;
+  }
+}
+@media (max-width: 539px) {
+  body #search .flower-image-box {
+    height: auto;
+    min-height: 200px;
   }
 }/*# sourceMappingURL=search.css.map */

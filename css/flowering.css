@@ -12,22 +12,35 @@
   width: 90%;
   max-width: 1300px;
   z-index: 2;
+  margin: 50px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #flowering .text h2 {
     text-align: center;
+    margin: 20px;
+  }
+}
+@media (max-width: 539px) {
+  #flowering .text h2 {
+    margin: 10px;
   }
 }
 #flowering .flowering {
   display: flex;
   justify-content: center;
+  padding: 0px 25px;
 }
 #flowering .flowering .sheet {
   border-radius: 15px;
   box-shadow: 6px 6px 10px -4px black;
-  width: 95%;
+  width: 100%;
   max-width: 1300px;
   z-index: 2;
+}
+@media (max-width: 539px) {
+  #flowering .flowering {
+    padding: 0px 14px;
+  }
 }
 #flowering .mountain {
   position: absolute;

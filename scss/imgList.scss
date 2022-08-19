@@ -1,0 +1,117 @@
+#imgList {
+    width: 100%;
+    margin: 0 auto;
+    height: 450px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    position: relative;
+
+    .title{
+        display: flex;
+        margin-bottom: 45px;
+
+        img{
+            width: 15%;
+            min-width: 180px;
+            @media (max-width:767px) {
+              order: -1;
+              margin-bottom: 24px;
+            }
+          }
+
+          p{
+            display: none;
+            margin: 12px 0px;
+            @media (max-width:767px) {
+              display: block;
+              
+            }
+          }
+
+        .text-left{
+            width: calc(85% / 2);
+            letter-spacing:15px;
+            opacity: 0.8;
+            padding-top: 3%;
+            display: flex;
+            justify-content: end;
+            text-align: end;
+            @media (max-width:1024px) {
+              letter-spacing:7px;
+            }
+            @media (max-width:767px) {
+              width: 100%;
+              padding: 0px;
+              justify-content: center;
+              text-align: center;
+            }
+          }
+
+        .text-right{
+            width: calc(85% / 2);
+            letter-spacing:15px;
+            opacity: 0.8;
+            padding-bottom: 1%;
+            padding-left: 1%;
+            display: flex;
+            align-items: flex-end;
+            @media (max-width:1024px) {
+              letter-spacing:7px;
+            }
+            @media (max-width:767px) {
+              width: 100%;
+              padding: 0px;
+              justify-content: center;
+              text-align: center;
+            }
+          }
+          @media (max-width:767px) {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+      }
+
+        .box {
+        -webkit-animation: rolling 40s linear infinite;
+                animation: rolling 40s linear infinite;
+        position: absolute;
+        display: flex;
+
+        &:hover {
+            -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
+          }
+
+        img {
+            padding: 10px 10px;
+            width: 280px;
+            height: 210px;
+            float: left;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.2);
+                z-index: 1;
+              }
+          }
+    }
+    @media (max-width:767px) {
+      height: 550px;
+    }
+}
+@keyframes rolling {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @-webkit-keyframes rolling {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
