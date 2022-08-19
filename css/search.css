@@ -2,8 +2,6 @@ body {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 body #search {
   position: relative;
@@ -19,10 +17,11 @@ body #search h2 {
 }
 body #search > img {
   width: 15%;
+  min-width: 200px;
   margin: 80px 0px;
 }
 body #search .choose {
-  padding: 40px;
+  padding: 40px 0px;
   display: flex;
   justify-content: center;
 }
@@ -38,18 +37,27 @@ body #search .choose select optgroup {
   color: white;
   background-color: cadetblue;
 }
+@media (max-width: 1024px) {
+  body #search .choose select {
+    margin: 15px;
+    width: 150px;
+  }
+}
 body #search #icon-box {
   width: 100%;
   height: 230px;
   display: flex;
   justify-content: center;
+  padding: 0px 10px;
 }
 body #search #icon-box #icon {
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
 }
 body #search #icon-box #icon img {
@@ -61,10 +69,21 @@ body #search #icon-box #icon img {
 body #search #icon-box #icon img:hover {
   transform: scale(1.1);
 }
+@media (max-width: 1024px) {
+  body #search #icon-box #icon img {
+    width: 50PX;
+  }
+}
+@media (max-width: 1024px) {
+  body #search #icon-box {
+    height: 300px;
+  }
+}
 body #search .flower-image-box {
   display: flex;
   height: 775px;
   width: 100%;
+  overflow: hidden;
 }
 body #search .flower-image-box .bird-box {
   width: calc((100% - 850px) / 2);
@@ -76,13 +95,14 @@ body #search .flower-image-box .bird-box img {
   width: 200px;
 }
 body #search .flower-image-box #flower-box {
-  width: 850px;
+  width: 100%;
+  max-width: 850px;
 }
 body #search .flower-image-box #flower-box .information {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 850px;
+  width: 100%;
 }
 body #search .flower-image-box #flower-box .information .flower-image {
   width: 550px;
@@ -94,6 +114,17 @@ body #search .flower-image-box #flower-box .information .flower-image {
 body #search .flower-image-box #flower-box .information .flower-image img {
   width: auto;
   height: 90%;
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box #flower-box .information .flower-image img {
+    height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box #flower-box .information .flower-image {
+    height: 330px;
+    width: 375px;
+  }
 }
 body #search .flower-image-box #flower-box .information .flower-news {
   width: 300px;
@@ -120,6 +151,11 @@ body #search .flower-image-box #flower-box .information .flower-news .news span 
   width: 240px;
   text-align: justify;
 }
+@media (max-width: 1024px) {
+  body #search .flower-image-box #flower-box .information .flower-news {
+    padding-top: 0px;
+  }
+}
 body #search .flower-image-box #flower-box .information .flower-introduce {
   padding-top: 40px;
   width: 100%;
@@ -127,11 +163,15 @@ body #search .flower-image-box #flower-box .information .flower-introduce {
   justify-content: center;
 }
 body #search .flower-image-box #flower-box .information .flower-introduce p {
-  width: 850px;
   word-break: break-all;
   text-align: justify;
   line-height: 30px;
   font-size: 18px;
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box #flower-box .information .flower-introduce {
+    padding: 0px 20px;
+  }
 }
 body #search .flower-image-box #flower-box .none {
   display: none;
@@ -142,6 +182,32 @@ body #search .flower-image-box .girl-img {
   display: flex;
   align-items: flex-end;
 }
-body #search .flower-image-box .girl-img img {
+body #search .flower-image-box .girl-img .girl {
   width: 200px;
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box .girl-img .girl {
+    display: none;
+  }
+}
+body #search .flower-image-box .girl-img .bird {
+  display: none;
+  width: 150px;
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box .girl-img .bird {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box .girl-img {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1024px) {
+  body #search .flower-image-box {
+    height: auto;
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=search.css.map */

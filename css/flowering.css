@@ -13,6 +13,11 @@
   max-width: 1300px;
   z-index: 2;
 }
+@media (max-width: 1024px) {
+  #flowering .text h2 {
+    text-align: center;
+  }
+}
 #flowering .flowering {
   display: flex;
   justify-content: center;
@@ -20,7 +25,7 @@
 #flowering .flowering .sheet {
   border-radius: 15px;
   box-shadow: 6px 6px 10px -4px black;
-  width: 80%;
+  width: 90%;
   max-width: 1300px;
   z-index: 2;
 }

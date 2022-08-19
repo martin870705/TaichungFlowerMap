@@ -2,9 +2,6 @@ body {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
 
     #search {
         position: relative;
@@ -21,11 +18,12 @@ body {
 
         &>img {
             width: 15%;
-  margin: 80px 0px;
+            min-width: 200px;
+            margin: 80px 0px;
         }
 
         .choose {
-            padding: 40px;
+            padding: 40px 0px;
             display: flex;
             justify-content: center;
 
@@ -41,6 +39,10 @@ body {
                     color: white;
                     background-color: cadetblue;
                 }
+                @media (max-width:1024px) {
+                    margin: 15px;
+                    width: 150px;
+                }
             }
 
            
@@ -51,13 +53,16 @@ body {
             height: 230px;
             display: flex;
             justify-content: center;
+            padding: 0px 10px;
 
             #icon {
-                width: 900px;
+                width: 100%;
+                max-width: 900px;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
+                align-content: flex-start;
                 flex-wrap: wrap;
 
                 img {
@@ -69,7 +74,15 @@ body {
                     &:hover {
                         transform: scale(1.1);
                     }
+                    @media (max-width:1024px) {
+                        width: 50PX;
+                    }
                 }
+                
+            }
+
+            @media (max-width:1024px) {
+                height: 300px;
             }
         }
 
@@ -77,6 +90,7 @@ body {
             display: flex;
             height: 775px;
             width: 100%;
+            overflow: hidden;
 
             .bird-box {
                 width: calc(calc(100% - 850px) / 2);
@@ -90,12 +104,13 @@ body {
             }
 
             #flower-box {
-                width: 850px;
+                width: 100%;
+                max-width: 850px;
                 .information {
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
-                    width: 850px;
+                    width:100%;
 
                     .flower-image {
                         width: 550px;
@@ -106,6 +121,13 @@ body {
                         img {
                             width: auto;
                             height: 90%;
+                            @media (max-width:1024px) {
+                                height: 100%;
+                            }
+                        }
+                        @media (max-width:1024px) {
+                            height: 330px;
+                            width: 375px;
                         }
 
                     }
@@ -140,6 +162,10 @@ body {
 
                             }
                         }
+                        @media (max-width:1024px) {
+                            padding-top: 0px;
+                    
+                        }
                     }
 
                     .flower-introduce {
@@ -149,11 +175,14 @@ body {
                         justify-content: center;
 
                         p {
-                            width: 850px;
+
                             word-break: break-all;
                             text-align: justify;
                             line-height: 30px;
                             font-size: 18px;
+                        }
+                        @media (max-width:1024px) {
+                            padding: 0px 20px;
                         }
                     }
 
@@ -172,12 +201,28 @@ body {
                 display: flex;
                 align-items: flex-end;
 
-                img {
-
+                .girl {
                     width: 200px;
-
-
+                    @media (max-width:1024px) {
+                        display: none;
+                    }
                 }
+                .bird{
+                    display: none;
+                    width: 150px;
+                    @media (max-width:1024px) {
+                        display: block;
+                    }
+                }
+                @media (max-width:1024px) {
+                    width: 100%;
+                    justify-content: flex-end;
+                }
+                
+            }
+            @media (max-width:1024px) {
+                height: auto;
+                flex-wrap: wrap;
             }
         }
 
