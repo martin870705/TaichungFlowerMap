@@ -9,7 +9,7 @@ let placesTag = ''
 
 // test.innerHTML = FLOWERS[0].tag.join('、')
 
-fetch('./json/臺中市賞花景點.json')//抓取資料
+fetch('./js/json/flower_view.json')//抓取資料
     .then(function (response) {
         return response.json();
     }).then(function (datas) {

@@ -62,7 +62,7 @@ btns.forEach(function (btn, num) {
 
 
 
-fetch('../json/臺中市賞花景點.json')
+fetch('./js/json/flower_view.json')
 .then(function (response) {
     return response.json();
 })
@@ -112,7 +112,7 @@ function flowermap_filter(area, index) {
     //=======================地點區end===================================================
 
 
-    fetch('../json/臺中市賞花景點.json')
+    fetch('./js/json/flower_view.json')
         .then(function (response) {
             return response.json();
         })
@@ -195,7 +195,7 @@ function flowermap_filter(area, index) {
 
 //測試圖片是否皆為有效連結用
 function imgtest() {
-    fetch('../json/臺中市賞花景點.json')
+    fetch('./js/json/flower_view.json')
         .then(function (response) {
             return response.json();
         })

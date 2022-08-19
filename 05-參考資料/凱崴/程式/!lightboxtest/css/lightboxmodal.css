@@ -267,12 +267,6 @@
   background-color: #222;
   color: wheat;
 }
-@media (max-width: 500px) {
-  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
-    width: 100%;
-    height: 100px;
-  }
-}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description ul li {
   display: flex;
 }

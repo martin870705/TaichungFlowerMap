@@ -12,14 +12,13 @@
   width: 80%;
   max-width: 1300px;
   z-index: 2;
-  letter-spacing: 7px;
 }
 #flowering .flowering {
   display: flex;
   justify-content: center;
 }
 #flowering .flowering .sheet {
-  border-radius: 30px;
+  border-radius: 15px;
   box-shadow: 6px 6px 10px -4px black;
   width: 80%;
   max-width: 1300px;
