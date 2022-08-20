@@ -30,6 +30,17 @@ body {
             }
         }
 
+        .bgi{
+            width: 100%;
+            display: none;
+            @media (max-width:539px) {
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top: 100px;
+            }
+        }
+
         .choose {
             padding: 40px 0px;
             display: flex;
@@ -232,6 +243,10 @@ body {
                         @media (max-width:1023px) {
                             padding: 0px;
                         }
+                        @media (max-width:539px) {
+                            background-image: url("../img/程式用圖區/花卉介紹綠底漸層.png");
+                            background-size: cover;
+                        }
                     }
 
                 }
@@ -287,7 +302,7 @@ body {
             }
             @media (max-width:539px) {
                 height: auto;
-                min-height: 200px;
+                min-height: 800px;
             }
         }
 

@@ -5,7 +5,12 @@
   flex-wrap: wrap;
   padding: 0px 9px;
   display: none;
-  z-index: 1;
+  z-index: 0;
+}
+#flowerMap-buttom-box img {
+  position: absolute;
+  z-index: -1;
+  top: -300px;
 }
 #flowerMap-buttom-box .buttom {
   width: 60px;

@@ -48,11 +48,21 @@
   top: 0%;
   z-index: 1;
 }
+@media (max-width: 539px) {
+  #flowering .mountain {
+    display: none;
+  }
+}
 #flowering .sky {
   position: absolute;
   width: 100%;
   bottom: 26%;
   z-index: 0;
+}
+@media (max-width: 539px) {
+  #flowering .sky {
+    display: none;
+  }
 }
 #flowering .sun {
   position: absolute;
@@ -60,6 +70,11 @@
   bottom: 85%;
   right: 15%;
   z-index: 1;
+}
+@media (max-width: 539px) {
+  #flowering .sun {
+    display: none;
+  }
 }
 @media (max-width: 1024px) {
   #flowering {

@@ -28,4 +28,10 @@
 #footer .bottom-text p {
   text-align: center;
   color: white;
+}
+@media (max-width: 539px) {
+  #footer p {
+    letter-spacing: 0px;
+    margin: 14px 0px;
+  }
 }/*# sourceMappingURL=footer.css.map */
