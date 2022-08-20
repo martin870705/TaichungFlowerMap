@@ -65,13 +65,73 @@
         position: absolute;
         width: 14%;
         bottom: 85%;
-        right: 15%;
+        left: 71%;
         z-index: 1;
+        animation-timing-function: linear;
+        animation-name:sun-x ,sun-y;
+        animation-duration:2s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        @media (max-width:539px) {
+            display: none;
+        }
+    }
+
+    .moon{
+        position: absolute;
+        width: 14%;
+        bottom: 35%;
+        right: 100%;
+        z-index: 1;
+        animation-timing-function: linear;
+        animation-name:moon-x ,moon-y;
+        animation-duration:3s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
         @media (max-width:539px) {
             display: none;
         }
     }
     @media (max-width:1024px) {
         padding-top: 8%;
+    }
+}
+@keyframes sun-x{
+    100%{
+
+        left: 100%;
+    }
+}
+
+@keyframes sun-y{
+    0%{
+        animation-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+        bottom: 85%;
+    }
+    100%{
+        bottom: 35%;
+    }
+}
+
+@keyframes moon-x{
+
+    100%{
+
+        right: 15%;
+    }
+}
+
+@keyframes moon-y{
+    0%{
+        animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+        bottom: 35%;
+    }
+    75%{
+        animation-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+        bottom: 95%;
+    }
+
+    100%{
+        bottom: 85%;
     }
 }

@@ -68,16 +68,120 @@
   position: absolute;
   width: 14%;
   bottom: 85%;
-  right: 15%;
+  left: 71%;
   z-index: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: sun-x, sun-y;
+          animation-name: sun-x, sun-y;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 @media (max-width: 539px) {
   #flowering .sun {
     display: none;
   }
 }
+#flowering .moon {
+  position: absolute;
+  width: 14%;
+  bottom: 35%;
+  right: 100%;
+  z-index: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: moon-x, moon-y;
+          animation-name: moon-x, moon-y;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@media (max-width: 539px) {
+  #flowering .moon {
+    display: none;
+  }
+}
 @media (max-width: 1024px) {
   #flowering {
     padding-top: 8%;
+  }
+}
+
+@-webkit-keyframes sun-x {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes sun-x {
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes sun-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    bottom: 85%;
+  }
+  100% {
+    bottom: 35%;
+  }
+}
+@keyframes sun-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    bottom: 85%;
+  }
+  100% {
+    bottom: 35%;
+  }
+}
+@-webkit-keyframes moon-x {
+  100% {
+    right: 15%;
+  }
+}
+@keyframes moon-x {
+  100% {
+    right: 15%;
+  }
+}
+@-webkit-keyframes moon-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    bottom: 35%;
+  }
+  75% {
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    bottom: 95%;
+  }
+  100% {
+    bottom: 85%;
+  }
+}
+@keyframes moon-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    bottom: 35%;
+  }
+  75% {
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    bottom: 95%;
+  }
+  100% {
+    bottom: 85%;
   }
 }/*# sourceMappingURL=flowering.css.map */
