@@ -12,6 +12,12 @@
   position: absolute;
   z-index: -1;
   top: -300px;
+  display: none;
+}
+@media (max-width: 539px) {
+  #flowerMap-buttom-box img {
+    display: block;
+  }
 }
 #flowerMap-buttom-box .buttom {
   width: 60px;
