@@ -8,6 +8,7 @@
   z-index: 0;
 }
 #flowerMap-buttom-box img {
+  width: 100%;
   position: absolute;
   z-index: -1;
   top: -300px;
