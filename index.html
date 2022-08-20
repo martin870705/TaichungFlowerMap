@@ -27,6 +27,8 @@
             -webkit-user-drag: none;
         }
         main ,footer{
+            overflow: hidden;
+            /* overflow-x: scroll; */
             position: relative;
             background-color: white;
         }
@@ -67,7 +69,7 @@
                                 花卉介紹
                             </li></a>
                             <a href="#imgList"><li>
-                                拍照苦守救星
+                                拍照苦手救星
                             </li></a>
                             <a href="#footer"><li>
                                 關於我們
@@ -3275,8 +3277,10 @@
                 <div class="flowering">
                     <img src="./img/程式用圖區/花期表格@4x.png" alt="花期表格" class="sheet">
                 </div>
-                <img src="./img/程式用圖區/前山後山/前山白天.png" alt="" class="mountain">
-                <img src="./img/程式用圖區/前山後山/白天後山@4x.png" alt="" class="sky"></img>
+                <img src="./img/程式用圖區/前山後山/夜晚前山20220818.png" alt="" id="night-mountain" class="mountain night">
+                <img src="./img/程式用圖區/前山後山/前山白天.png" id="day-mountain" alt="" class="mountain">
+                <img src="./img/程式用圖區/前山後山/夜晚後山@4x.png" alt="" id="night-sky" class="sky night">
+                <img src="./img/程式用圖區/前山後山/白天後山@4x.png" alt="" id="day-sky" class="sky"></img>
             </div>
         </section>
         <!--花期-->
@@ -3377,7 +3381,7 @@
             </div>
     </footer>
     <!--結尾-->
-
+    <script src="./js/flowering.js"></script>
     <script src="./js/lightboxmodal.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/topic.js"></script>
