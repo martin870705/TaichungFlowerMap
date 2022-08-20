@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -17,9 +14,6 @@
     opacity: 1;
   }
 }
-* ul {
-  list-style: none;
-}
 * body {
   margin: 0px;
   padding: 0px;
@@ -33,6 +27,16 @@
 }
 * body #lightbox-test1 {
   position: relative;
+}
+* body #lightbox-test1 * {
+  box-sizing: border-box;
+}
+* body #lightbox-test1 * ul {
+  list-style: none;
+}
+* body #lightbox-test1 * p {
+  margin: 0px;
+  padding: 0px;
 }
 * body #lightbox-test1 .test {
   height: 1000px;
@@ -187,7 +191,7 @@
   width: 70%;
   height: calc(100% - 15vh);
   position: relative;
-  background-color: #ffa;
+  background-color: transparent;
   margin: auto;
   padding: 0;
   max-width: 1200px;
@@ -202,7 +206,6 @@
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information {
   width: 100%;
   height: 90%;
-  background-color: rgba(20, 20, 20, 0.5);
   display: flex;
   flex-wrap: wrap;
 }
@@ -263,22 +266,16 @@
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
   width: 40%;
-  height: 100%;
-  background-color: #222;
-  color: wheat;
-}
-* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description ul li {
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon {
   width: 100%;
   height: 10%;
-  background-color: rgba(53, 61, 55, 0.5);
   display: flex;
   justify-content: start;
   padding: 0px 50px;
   align-items: center;
-  background-color: #ACC8CC;
+  background-color: rgba(172, 200, 204, 0.8);
   font-size: 14px;
   font-size: 14px;
 }
