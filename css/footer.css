@@ -8,6 +8,7 @@
   background-image: url(../img/程式用圖區/newfooter.png);
   background-position: bottom ;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

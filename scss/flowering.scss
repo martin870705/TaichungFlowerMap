@@ -46,20 +46,21 @@
         width: 100%;
         top: 0%;
         z-index: 1;
+        transition:3s;
         @media (max-width:539px) {
             display: none;
         }
     }
     
     .night{
-        transition:3s;
+        // transition:3s;
         opacity: 0;
     }
     .sky {
         position: absolute;
         width: 100%;
         bottom: 26%;
-        // transition:3s;
+        transition:3s;
         z-index: 0;
         @media (max-width:1399px) {
             bottom: 38%;
@@ -78,14 +79,24 @@
         bottom: 85%;
         left: 71%;
         z-index: 1;
-        animation-timing-function: linear;
-        animation-name:sun-x ,sun-y;
-        animation-duration:2s;
-        animation-fill-mode:both;
-        animation-play-state: paused;
+        animation-timing-function:linear;
         @media (max-width:539px) {
             display: none;
         }
+    }
+
+    .sun-dayToNight{
+        animation-name:sun-dayToNight-x ,sun-dayToNight-y;
+        animation-duration:2s;
+        animation-fill-mode:both;
+        // animation-play-state: paused;
+    }
+
+    .sun-nightToDay{
+        animation-name:sun-nightToDay-x,sun-nightToDay-y;
+        animation-duration:3s;
+        animation-fill-mode:both;
+        // animation-play-state: paused;
     }
 
     .moon{
@@ -94,27 +105,39 @@
         bottom: 35%;
         right: 100%;
         z-index: 1;
-        animation-timing-function: linear;
-        animation-name:moon-x ,moon-y;
-        animation-duration:3s;
-        animation-fill-mode:both;
-        animation-play-state: paused;
         @media (max-width:539px) {
             display: none;
         }
+    }
+
+    .moon-dayToNight{
+        animation-timing-function: linear;
+        animation-name:moon-dayToNight-x ,moon-dayToNight-y;
+        animation-duration:3s;
+        animation-fill-mode:both;
+        // animation-play-state: paused;
+    }
+
+    .moon-nightToDay{
+        animation-timing-function: linear;
+        animation-name:moon-nightToDay-x,moon-nightToDay-y;
+        animation-duration:3s;
+        animation-fill-mode:both;
     }
     @media (max-width:1024px) {
         padding-top: 8%;
     }
 }
-@keyframes sun-x{
+@keyframes sun-dayToNight-x{
+    0%{
+        left: 71%;
+    }
     100%{
 
         left: 100%;
     }
 }
-
-@keyframes sun-y{
+@keyframes sun-dayToNight-y{
     0%{
         animation-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
         bottom: 85%;
@@ -123,16 +146,36 @@
         bottom: 35%;
     }
 }
+@keyframes sun-nightToDay-x{
+    0%{
+        left: 100%;
+    animation-timing-function: linear;
+    }
+    100%{
+        left: 71%;
+    }
+}
+@keyframes sun-nightToDay-y{
+    0%{
+        animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+        bottom: 35%;
+    }
+    100%{
+        bottom: 85%;
+    }
+}
 
-@keyframes moon-x{
+@keyframes moon-dayToNight-x{
+    0%{
+        right: 100%;
+    }
 
     100%{
-
         right: 15%;
     }
 }
 
-@keyframes moon-y{
+@keyframes moon-dayToNight-y{
     0%{
         animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
         bottom: 35%;
@@ -144,5 +187,28 @@
 
     100%{
         bottom: 85%;
+    }
+}
+
+@keyframes moon-nightToDay-x{
+    0%{
+        right: 15%;
+    animation-timing-function: linear;
+    }
+    100%{
+        right: 100%;
+    }
+}
+@keyframes moon-nightToDay-y{
+    0%{
+        animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+        bottom: 85%;
+    }
+    25%{
+        animation-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+        bottom: 95%;
+    }
+    100%{
+        bottom: 35%;
     }
 }
