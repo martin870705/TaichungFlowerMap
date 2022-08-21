@@ -175,7 +175,7 @@ function flowermap_filter(area, index) {
 </div>
 <div class="afd-content" id="afd-content">
     <div class="afd-content-weatherblock">
-        <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+        <div class="weather-icon"></div>
         <div class="weather-text-big-block">
             <div class="weather-text-briefly">
                 <p><span id="afd-weather-brieflytext"></span></p>
@@ -264,6 +264,7 @@ function flowermap_filter(area, index) {
     const afdcob_name_text = document.getElementById('afdcob-text-name-text');
     const afdcob_flowertype_block = document.getElementById('afdcob-text-flowertype-block');
     const afdcob_address_text = document.getElementById('afdcob-text-address-text');
+    const weather_icon_text = document.querySelector('#afd-content .afd-content-weatherblock .weather-icon');
     //=======================連結區=======================================================
     const a_googlelink_phone = document.getElementById('lightbox-map-link-phone');
     const a_google_link_desktop = document.getElementById('lightbox-map-link-desktop');
@@ -388,7 +389,7 @@ function flowermap_filter(area, index) {
             //待修改 之後可以利用當前時間再去判斷要插入哪一筆資料:主要是time的位子
             afd_weather_briefly_text.innerHTML+=`${brieflyshortcut}`;
             const tempshortcut=shortcut[locationnum].weatherElement[3].time;
-            console.log(tempshortcut);
+            console.log(brieflyshortcut);
             let int_low_temp=30;
             let int_high_temp=0;
             //這邊只取到8因為只想看前八筆資料,代表當天的資料,去抓取當天最高&最低氣溫
@@ -404,7 +405,33 @@ function flowermap_filter(area, index) {
             //待修改 之後需要用當前時間判斷
             const rainshortcut=shortcut[locationnum].weatherElement[0].time[1].elementValue[0].value;
             afd_rain_text.innerHTML+=`降雨機率:${rainshortcut}%`
+
+            let weather_fontawesomeicon = "";
+
+            if (brieflyshortcut.includes('雷')) {
+                weather_fontawesomeicon='<i class="fa-solid fa-cloud-bolt"></i>';//晴午後短暫雷陣雨
+            }else if(brieflyshortcut.includes('雲',3)){  //可估狗string includes
+                weather_fontawesomeicon='<img src="./img/程式用圖區/weather/sun-solid.png" alt="">';//晴時多雲  
+            }else if(brieflyshortcut.includes('晴',3)){
+                weather_fontawesomeicon='<i class="fa-solid fa-clouds-sun"></i>';//多雲時晴
+            }
+            else if(brieflyshortcut.includes('晴')){
+                weather_fontawesomeicon='<i class="fa-solid fa-sun"></i>';
+            }else if(brieflyshortcut.includes('雲')){
+                weather_fontawesomeicon='<img src="./img/程式用圖區/weather/cloud.png" alt="">';//多雲
+            }else if(brieflyshortcut.includes('陰')){
+            
+             weather_fontawesomeicon='<i class="fa-solid fa-cloud"></i>';
+            }
+            else{
+                weather_fontawesomeicon='<i class="fa-solid fa-cloud-rain"></i>';
+            }
+
+            weather_icon_text.innerHTML = `${weather_fontawesomeicon}`
         })
+
+
+
 }
 
 

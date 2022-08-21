@@ -392,6 +392,9 @@
   width: 45%;
   text-align: center;
 }
+* body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon img{
+  width: 100%;
+}
 @media (max-width: 767px) {
   * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon {
     width: 10%;
