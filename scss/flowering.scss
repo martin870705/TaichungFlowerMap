@@ -45,21 +45,21 @@
         position: absolute;
         width: 100%;
         top: 0%;
-        transition:3s;
         z-index: 1;
         @media (max-width:539px) {
             display: none;
         }
     }
-
+    
     .night{
+        transition:3s;
         opacity: 0;
     }
     .sky {
         position: absolute;
         width: 100%;
         bottom: 26%;
-        transition:3s;
+        // transition:3s;
         z-index: 0;
         @media (max-width:1399px) {
             bottom: 38%;
