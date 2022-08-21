@@ -2,15 +2,15 @@
 function openModal() {
     document.getElementById("myModal").style.display = "block";
     //因為position fixed會打架所以直接拔掉nav的按鈕
-    // document.querySelector('#banner .ham').style.display="none";
-    // document.querySelector('#banner .catalog').style.display="none";
+    document.querySelector('#banner .ham').style.display="none";
+    document.querySelector('#banner .catalog').style.display="none";
 }
 
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
     //恢復按鈕
-    // document.querySelector('#banner .ham').style.display="block";
-    // document.querySelector('#banner  .catalog').style.display="block";
+    document.querySelector('#banner .ham').style.display="block";
+    document.querySelector('#banner  .catalog').style.display="block";
 }
 
 function plusSlides(n) {
