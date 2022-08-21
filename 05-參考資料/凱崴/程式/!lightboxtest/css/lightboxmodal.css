@@ -168,6 +168,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
 }
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal {
+    padding-top: 10vh;
+  }
+}
 * body #lightbox-test1 .container .modal .close {
   color: white;
   position: absolute;
@@ -197,14 +202,15 @@
   background-color: transparent;
   margin: auto;
   padding: 0;
-  max-width: 1200px;
+  min-width: 740px;
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 767px) {
   * body #lightbox-test1 .container .modal .modal-content .areabody {
-    height: 500px;
-    max-width: unset;
+    height: calc(100% - 10vh);
+    width: 100%;
+    min-width: unset;
   }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information {
@@ -219,10 +225,10 @@
   background-color: #777;
   position: relative;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper {
     width: 100%;
-    height: 100px;
+    height: 70%;
   }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-pic-swiper img {
@@ -274,6 +280,14 @@
   background-color: rgba(0, 0, 0, 0.35);
   position: relative;
 }
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description p,
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description span {
   color: white;
@@ -300,10 +314,39 @@
   font-size: 48px;
   line-height: 100px;
 }
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-title {
+    position: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+  }
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-title .afd-title-text {
+    width: 70px;
+  }
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-title .afd-title-text p {
+    display: block;
+    position: static;
+    transform: unset;
+    border-bottom: unset;
+    border-right: 3px solid white;
+  }
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-title .afd-title-text span {
+    line-height: 120%;
+  }
+}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content {
   width: 100%;
   height: 100%;
   position: relative;
+}
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content {
+    width: 80%;
+    padding: 20px 0px;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock {
   position: absolute;
@@ -313,13 +356,34 @@
   display: flex;
   padding: 5px 50px;
 }
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock {
+    padding: 0px;
+    position: static;
+  }
+}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon {
   width: 45%;
   text-align: center;
 }
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon {
+    width: 20%;
+  }
+}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon .fa-solid {
   color: #fff;
   font-size: 80px;
+}
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon .fa-solid {
+    font-size: 48px;
+  }
+}
+@media (max-width: 440px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon .fa-solid {
+    font-size: 36px;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-text-big-block {
   width: 55%;
@@ -328,12 +392,31 @@
   flex-direction: column;
   justify-content: space-around;
 }
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-text-big-block {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-text-big-block .weather-text-temp-rain-block {
+    display: flex;
+    align-items: center;
+  }
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-text-big-block .weather-text-temp-rain-block > div {
+    margin-right: 10px;
+  }
+}
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block {
   position: absolute;
   top: 55%;
   bottom: 0%;
   left: 0px;
   right: 0px;
+}
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block {
+    position: static;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text {
   height: 100%;
@@ -343,6 +426,14 @@
   position: relative;
   height: 30%;
   transform: translate(0px, -10px);
+}
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-name {
+    position: static;
+    text-align: start;
+    transform: unset;
+    margin-top: 5px;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-name .text-icon #afdcob-text-name-text {
   font-size: 18px;
@@ -443,6 +534,18 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+@media (max-width: 767px) {
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location {
+    font-size: 0px;
+    height: 10px;
+    padding: 15px;
+    border-radius: 100%;
+    margin-right: 20px;
+  }
+  * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location:hover {
+    background-color: unset;
+  }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-location-icon .area-location.areabody-location-active {
   background-color: #fff;

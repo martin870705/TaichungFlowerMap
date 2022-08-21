@@ -38,7 +38,8 @@
                     margin: 0px;
                     padding: 0px;
                 }
-                a{
+
+                a {
                     text-decoration: none;
                 }
             }
@@ -198,6 +199,10 @@
                     height: 100%;
                     background-color: rgba(0, 0, 0, 0.45);
 
+                    @media(max-width:767px) {
+                        padding-top: 10vh;
+                    }
+
                     .close {
                         color: white;
                         position: absolute;
@@ -225,8 +230,9 @@
 
                             @media(max-width:767px) {
                                 //手機板變版
-                                height: 500px;
-                                max-width: unset;
+                                height: calc(100% - 10vh);
+                                width: 100%;
+                                min-width: unset;
                             }
 
                             // background-color: #fa0;
@@ -234,7 +240,7 @@
                             background-color: transparent;
                             margin: auto;
                             padding: 0;
-                            max-width: 1200px;
+                            min-width:740px;
                             display: flex;
                             flex-direction: column;
 
@@ -250,10 +256,10 @@
                                     height: 100%;
                                     background-color: #777;
 
-                                    @media(max-width :500px) {
+                                    @media(max-width :767px) {
                                         //手機板變版
                                         width: 100%;
-                                        height: 100px;
+                                        height: 70%;
                                     }
 
                                     position: relative;
@@ -313,6 +319,13 @@
                                     background-color: rgba(0, 0, 0, 0.35);
                                     position: relative;
 
+                                    @media(max-width:767px) {
+                                        width: 100%;
+                                        height: 30%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                    }
+
                                     p,
                                     span {
                                         color: white;
@@ -347,13 +360,46 @@
                                                 line-height: 100px;
                                             }
                                         }
+                                        @media(max-width:767px) {
+                                            position: unset;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            // flex-wrap: wrap;
+                                            height: 100%;
+                                            width: 20%;
+                                            .afd-title-text{
+                                                width: 70px;
+                                                p {
+                                                    display: block;
+                                                    position: static;
+                                                    transform: unset;
+                                                    border-bottom: unset;
+                                                    border-right: 3px solid white;
+                                                }
+                                                span {
+                                                    line-height: 120%;
+                                                    // display: flex;
+                                                    // flex-wrap: wrap;
+                                                    
+                                                    // @media(max-height:800px){
+                                                    //     font-size: 10px;
+                                                    // }
+                                                }
+                                            }
+                                        }
                                     }
 
                                     #afd-content {
                                         width: 100%;
                                         height: 100%;
                                         position: relative;
-
+                                        @media(max-width:767px){
+                                            width: 80%;
+                                            padding: 20px 0px;
+                                            // display: flex;
+                                            // justify-content: start;
+                                        }
                                         .afd-content-weatherblock {
                                             position: absolute;
                                             top: 5%;
@@ -361,14 +407,25 @@
                                             right: 0px;
                                             display: flex;
                                             padding: 5px 50px;
-
+                                            @media(max-width:767px){
+                                                padding:0px;
+                                                position: static;
+                                            }
                                             .weather-icon {
                                                 width: 45%;
                                                 text-align: center;
-
+                                                @media(max-width:767px){
+                                                    width: 20%;;
+                                                }
                                                 .fa-solid {
                                                     color: #fff;
                                                     font-size: 80px;
+                                                    @media(max-width:767px){
+                                                        font-size: 48px;
+                                                    }
+                                                    @media(max-width: 440px){
+                                                        font-size: 36px;
+                                                    }
                                                 }
                                             }
 
@@ -380,6 +437,18 @@
                                                 justify-content: space-around;
                                                 // .weather-text-briefly{
                                                 // }
+                                                @media(max-width:767px){
+                                                    width: 80%;
+                                                }
+                                                .weather-text-temp-rain-block{
+                                                    @media(max-width:767px){
+                                                        display: flex;
+                                                        align-items: center;
+                                                        >div{
+                                                            margin-right: 10px;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
 
@@ -390,17 +459,23 @@
                                             left: 0px;
                                             right: 0px;
                                             // background-color: red;
-
+                                            @media(max-width:767px){
+                                                position: static;
+                                            }
                                             #afdcob-text {
                                                 height: 100%;
-                                                
                                                 // position: relative;
                                                 .afdcob-text-name {
                                                     text-align: center;
                                                     position: relative;
                                                     height: 30%;
                                                     transform: translate(0px, -10px);
-
+                                                    @media(max-width:767px){
+                                                        position: static;
+                                                        text-align: start;
+                                                        transform: unset;
+                                                        margin-top: 5px;
+                                                    }
                                                     .text-icon {
                                                         #afdcob-text-name-text {
                                                             font-size: 18px;
@@ -422,60 +497,72 @@
                                                     display: flex;
                                                     justify-content: center;
                                                     align-items: center;
+
                                                     .icon-text {
                                                         display: flex;
                                                         align-items: center;
+
                                                         p {
                                                             margin-right: 10px;
                                                             display: inline-block;
+
                                                             i {
                                                                 font-size: 36px;
                                                             }
                                                         }
-                                                        #afdcob-text-flowertype-block{
+
+                                                        #afdcob-text-flowertype-block {
                                                             display: inline-block;
                                                             font-size: 16px;
                                                             // line-height:36px ;
                                                         }
                                                     }
                                                 }
-                                                .afdcob-text-address{
+
+                                                .afdcob-text-address {
                                                     height: 20%;
                                                     display: flex;
                                                     justify-content: center;
                                                     align-items: center;
-                                                    .icon-text{
-                                                        p{
-                                                            i{
+
+                                                    .icon-text {
+                                                        p {
+                                                            i {
                                                                 // font-size: 16px;
                                                             }
                                                         }
                                                     }
                                                 }
-                                                .afdcob-text-map{
+
+                                                .afdcob-text-map {
                                                     height: 20%;
                                                     display: flex;
                                                     justify-content: center;
                                                     align-items: center;
-                                                    .icon-text{
+
+                                                    .icon-text {
                                                         background-color: white;
                                                         border-radius: 25px;
                                                         display: flex;
                                                         padding: 3px 5px;
-                                                        &:hover{
+
+                                                        &:hover {
                                                             background-color: rgb(224, 224, 224);
                                                             box-shadow: 2px 2px #222
                                                         }
-                                                        p{
+
+                                                        p {
                                                             padding: 5px 5px;
                                                             // line-height: 30px;
                                                             display: flex;
                                                             align-items: center;
-                                                            span{
+
+                                                            span {
                                                                 font-size: 16px;
                                                                 // line-height: 30px;
-                                                                color:black;
-                                                                i{
+                                                                color: black;
+
+                                                                i {
                                                                     color: gray;
                                                                     font-size: 24px;
                                                                     margin-right: 3px;
@@ -500,7 +587,9 @@
                                 align-items: center;
                                 background-color: #acc8cccc;
                                 font-size: 14px;
-                                @media(max-width:1200px) {}
+
+                                @media(max-width:767px) {}
+
                                 font-size: 14px;
 
                                 .area-location {
@@ -515,14 +604,30 @@
                                     border: 2px white solid;
                                     user-select: none;
 
+                                    
                                     &:hover {
                                         background-color: #5580a4;
                                         user-select: none;
                                     }
+                                    @media(max-width:767px) {
+                                        font-size: 0px;
+                                        height: 10px;
+                                        padding: 15px;
+                                        border-radius: 100%;
+                                        margin-right: 20px;
+                                        &:hover{
+                                            //觸碰按鈕不需要有hover吧
+                                            background-color: unset;
+                                        }
+                                    }
                                 }
-                                .area-location.areabody-location-active{
+
+                                .area-location.areabody-location-active {
                                     background-color: #fff;
                                     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+                                    @media(max-width:767px) {
+                                    }
                                 }
                             }
                         }
