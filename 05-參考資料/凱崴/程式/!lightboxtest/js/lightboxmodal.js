@@ -48,11 +48,24 @@ function plusSlides(n) {
 }
 
 const areas = document.querySelectorAll('#map-svg .area-hover-effect');
-console.log(areas)
+// console.log(areas)
 areas.forEach(function (area, num) {
     area.addEventListener('click', function () {
         openModal();
         let areaname = area.getAttribute("data-areaname");
+        //有順利抓到attribute裡面藏的資料
+        // console.log(areaname);
+        // console.log(typeof(areaname));
+        flowermap_filter(areaname, 0);
+    })
+});
+
+const btn_areas = document.querySelectorAll('#flowerMap-buttom-box .buttom');
+console.log(btn_areas);
+btn_areas.forEach(function (area, num) {
+    area.addEventListener('click', function () {
+        openModal();
+        let areaname = area.getAttribute("data-area");
         //有順利抓到attribute裡面藏的資料
         // console.log(areaname);
         // console.log(typeof(areaname));
