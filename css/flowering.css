@@ -47,6 +47,7 @@
   width: 100%;
   top: 0%;
   z-index: 1;
+  transition: 3s;
 }
 @media (max-width: 539px) {
   #flowering .mountain {
@@ -54,13 +55,13 @@
   }
 }
 #flowering .night {
-  transition: 3s;
   opacity: 0;
 }
 #flowering .sky {
   position: absolute;
   width: 100%;
   bottom: 26%;
+  transition: 3s;
   z-index: 0;
 }
 @media (max-width: 1399px) {
@@ -86,19 +87,27 @@
   z-index: 1;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-name: sun-x, sun-y;
-          animation-name: sun-x, sun-y;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 @media (max-width: 539px) {
   #flowering .sun {
     display: none;
   }
+}
+#flowering .sun-dayToNight {
+  -webkit-animation-name: sun-dayToNight-x, sun-dayToNight-y;
+          animation-name: sun-dayToNight-x, sun-dayToNight-y;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+#flowering .sun-nightToDay {
+  -webkit-animation-name: sun-nightToDay-x, sun-nightToDay-y;
+          animation-name: sun-nightToDay-x, sun-nightToDay-y;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 #flowering .moon {
   position: absolute;
@@ -106,21 +115,31 @@
   bottom: 35%;
   right: 100%;
   z-index: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-name: moon-x, moon-y;
-          animation-name: moon-x, moon-y;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 @media (max-width: 539px) {
   #flowering .moon {
     display: none;
   }
+}
+#flowering .moon-dayToNight {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: moon-dayToNight-x, moon-dayToNight-y;
+          animation-name: moon-dayToNight-x, moon-dayToNight-y;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+#flowering .moon-nightToDay {
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: moon-nightToDay-x, moon-nightToDay-y;
+          animation-name: moon-nightToDay-x, moon-nightToDay-y;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 @media (max-width: 1024px) {
   #flowering {
@@ -128,18 +147,24 @@
   }
 }
 
-@-webkit-keyframes sun-x {
+@-webkit-keyframes sun-dayToNight-x {
+  0% {
+    left: 71%;
+  }
   100% {
     left: 100%;
   }
 }
 
-@keyframes sun-x {
+@keyframes sun-dayToNight-x {
+  0% {
+    left: 71%;
+  }
   100% {
     left: 100%;
   }
 }
-@-webkit-keyframes sun-y {
+@-webkit-keyframes sun-dayToNight-y {
   0% {
     -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
             animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -149,7 +174,7 @@
     bottom: 35%;
   }
 }
-@keyframes sun-y {
+@keyframes sun-dayToNight-y {
   0% {
     -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
             animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -159,17 +184,63 @@
     bottom: 35%;
   }
 }
-@-webkit-keyframes moon-x {
+@-webkit-keyframes sun-nightToDay-x {
+  0% {
+    left: 100%;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    left: 71%;
+  }
+}
+@keyframes sun-nightToDay-x {
+  0% {
+    left: 100%;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    left: 71%;
+  }
+}
+@-webkit-keyframes sun-nightToDay-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    bottom: 35%;
+  }
+  100% {
+    bottom: 85%;
+  }
+}
+@keyframes sun-nightToDay-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    bottom: 35%;
+  }
+  100% {
+    bottom: 85%;
+  }
+}
+@-webkit-keyframes moon-dayToNight-x {
+  0% {
+    right: 100%;
+  }
   100% {
     right: 15%;
   }
 }
-@keyframes moon-x {
+@keyframes moon-dayToNight-x {
+  0% {
+    right: 100%;
+  }
   100% {
     right: 15%;
   }
 }
-@-webkit-keyframes moon-y {
+@-webkit-keyframes moon-dayToNight-y {
   0% {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -184,7 +255,7 @@
     bottom: 85%;
   }
 }
-@keyframes moon-y {
+@keyframes moon-dayToNight-y {
   0% {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
             animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -197,5 +268,55 @@
   }
   100% {
     bottom: 85%;
+  }
+}
+@-webkit-keyframes moon-nightToDay-x {
+  0% {
+    right: 15%;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes moon-nightToDay-x {
+  0% {
+    right: 15%;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@-webkit-keyframes moon-nightToDay-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    bottom: 85%;
+  }
+  25% {
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    bottom: 95%;
+  }
+  100% {
+    bottom: 35%;
+  }
+}
+@keyframes moon-nightToDay-y {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    bottom: 85%;
+  }
+  25% {
+    -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+            animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    bottom: 95%;
+  }
+  100% {
+    bottom: 35%;
   }
 }/*# sourceMappingURL=flowering.css.map */
