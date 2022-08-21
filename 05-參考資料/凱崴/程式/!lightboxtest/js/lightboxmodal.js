@@ -99,6 +99,7 @@ function flowermap_filter(area, index) {
     const array_area_location = [];
     // let string_locationname = "";
     let string_locationaddress = "";
+    let string_locationgooglelink="";
     //=======================圖片區start===================================================
     //定位出要塞圖片的區域，採用id抓取
     const afps_img = document.getElementById('afps');
@@ -160,7 +161,7 @@ function flowermap_filter(area, index) {
     </div>
 </div>
 <div class="afd-content" id="afd-content">
-    <div class="afdcob-weather-block">
+    <div class="afd-content-weatherblock">
         <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
         <div class="weather-text-big-block">
             <div class="weather-text-briefly">
@@ -188,12 +189,12 @@ function flowermap_filter(area, index) {
     </div>
     <div class="afd-content-other-block">
         <div class="afdcob-text" id="afdcob-text">
-            <div class="afdcob-text-namd">
+            <div class="afdcob-text-name">
                 <div class="text-icon">
                     <p>
                         <span id="afdcob-text-name-text"></span>
                         <Span>
-                            <a href="" id="lightbox-map-link-phone">
+                            <a href="" id="lightbox-map-link-phone" target=_blank>
                             <i class="fa-solid fa-map-location-dot"></i>
                             </a>
                         </Span>
@@ -204,21 +205,20 @@ function flowermap_filter(area, index) {
                 <div class="icon-text">
                     <p>
                         <span><i class="fa-brands fa-pagelines"></i></span>
-                        <p id="afdcob-text-flowertype-block">
-                        </p>
                     </p>
+                    <div id="afdcob-text-flowertype-block"></div>
                 </div>
             </div>
             <div class="afdcob-text-address">
                 <div class="icon-text">
                     <p>
-                        <span><i class="fa-solid fa-map-location-dot"></i></span>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
                         <span id="afdcob-text-address-text"></span>
                     </p>
                 </div>
             </div>
             <div class="afdcob-text-map">
-                <a href="" id="lightbox-map-link-desktop">
+                <a href="" id="lightbox-map-link-desktop" target=_blank>
                     <div class="icon-text">
                         <p>
                             <span><i class="fa-solid fa-map-location-dot"></i></span>
@@ -254,8 +254,8 @@ function flowermap_filter(area, index) {
     //=======================連結區=======================================================
     const a_googlelink_phone = document.getElementById('lightbox-map-link-phone');
     const a_google_link_desktop = document.getElementById('lightbox-map-link-desktop');
-
-
+    // console.log(a_google_link_desktop);
+    // console.log(a_googlelink_phone);
 
 
 
@@ -285,9 +285,17 @@ function flowermap_filter(area, index) {
             //接著插入地點的block(待設計安排)
             for (let i = 0; i < array_area_location.length; i++) {
                 let iconnum = i + 1;
-                ali_block.innerHTML += `
-                <div class="area-location areabody-location${iconnum}" onclick="flowermap_filter('${area}',${i})">${array_area_location[i]}</div>
-                `
+                if(i==index){
+                    console.log('loctaionttest');
+                    ali_block.innerHTML += `
+                    <div class="area-location areabody-location${iconnum} areabody-location-active" onclick="flowermap_filter('${area}',${i})">${array_area_location[i]}</div>
+                    `
+                }
+                else{
+                    ali_block.innerHTML += `
+                    <div class="area-location areabody-location${iconnum}" onclick="flowermap_filter('${area}',${i})">${array_area_location[i]}</div>
+                    `
+                }
             }
 
 
@@ -299,6 +307,7 @@ function flowermap_filter(area, index) {
                     array_flowertype.push(`${mydata[i].花種}`);
                     // string_locationname = mydata[i].地點;
                     string_locationaddress = mydata[i].地址;
+                    string_locationgooglelink=mydata[i].googlemap;
                 }
             }
             if (array_imgsrc.length == 1) {
@@ -328,14 +337,19 @@ function flowermap_filter(area, index) {
             afdcob_name_text.innerHTML += `${array_area_location[index]}`;
             afdcob_flowertype_block.innerHTML += `<span>賞花種類:</span><span class="flowertype flowertype-active">${array_flowertype[0]}</span>`;
             for (let i = 1; i < array_flowertype.length; i++) {
-                afdcob_flowertype_block.innerHTML += `
-                <span>、</span>
-                <span class="flowertype">${array_flowertype[i]}</span>
+                afdcob_flowertype_block.innerHTML += `<span>、</span><span class="flowertype">${array_flowertype[i]}</span>
                 `
             }
+            //eg.
             afdcob_address_text.innerHTML+=`
             ${string_locationaddress}
             `;
+
+            a_google_link_desktop.href=string_locationgooglelink;
+            a_googlelink_phone.href=string_locationgooglelink;
+            console.log(a_google_link_desktop);
+            console.log(string_locationaddress);
+
         })
 
     fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-073?Authorization=CWB-4305977E-C979-416B-B5F0-7A4C2C7CBABA&format=JSON')

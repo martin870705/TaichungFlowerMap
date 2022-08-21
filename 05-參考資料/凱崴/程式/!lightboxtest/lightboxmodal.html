@@ -2742,7 +2742,8 @@
                   <div class="afd-content-other-block">
                     <div class="afdcob-text" id="afdcob-text">
                       <!-- 地點名稱,因為變版的時候接在後面會有一個超連結到googlemap的按鈕所以要藏一個icon -->
-                      <div class="afdcob-text-namd">
+                      <!-- 地點區塊 -->
+                      <div class="afdcob-text-name">
                         <!-- 因為icon會在後面  所以這邊是text-icon  -->
                         <div class="text-icon">
                           <p>
@@ -2750,7 +2751,7 @@
                             <!-- icon平常是看不到的  只有在縮到手機版的時候會出現-->
                             <Span>
                               <!-- 只想要在地圖的icon上有連結 給他個id方便DOM元素定位 -->
-                              <a href="" id="lightbox-map-link-phone">
+                              <a href="" id="lightbox-map-link-phone" target=_blank>
                                 <i class="fa-solid fa-map-location-dot"></i>
                               </a>
                             </Span>
@@ -2762,13 +2763,13 @@
                         <div class="icon-text">
                           <p>
                             <span><i class="fa-brands fa-pagelines"></i></span>
-                          <p id="afdcob-text-flowertype-block">
+                          </p>
+                          <div id="afdcob-text-flowertype-block">
                             <span>賞花種類:</span>
                             <span class="flowertype flowertype-active">櫻花</span>
                             <span>、</span>
                             <span class="flowertype">楓葉</span>
-                          </p>
-                          </p>
+                          </div>
                         </div>
                       </div>
                       <!-- 地址區塊 -->
@@ -2783,7 +2784,7 @@
                       <!-- 地圖區塊 -->
                       <div class="afdcob-text-map">
                         <!-- 這邊給他一個id,方便之後dom元素定位 -->
-                        <a href="" id="lightbox-map-link-desktop">
+                        <a href="" id="lightbox-map-link-desktop" target=_blank>
                           <div class="icon-text">
                               <p>
                                 <span><i class="fa-solid fa-map-location-dot"></i></span>
@@ -2798,7 +2799,7 @@
               </div>
             </div>
             <div class="areabody-location-icon" id="ali">
-              <div class="area-location areabody-location1">demo1</div>
+              <div class="area-location areabody-location1 areabody-location-active">demo1</div>
               <div class="area-location areabody-location2">demo2</div>
               <div class="area-location areabody-location3">demo3</div>
             </div>
