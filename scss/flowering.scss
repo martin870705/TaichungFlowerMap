@@ -46,21 +46,18 @@
         width: 100%;
         top: 0%;
         z-index: 1;
-        transition:3s;
+        // transition:3s;
         @media (max-width:539px) {
             display: none;
         }
     }
-    
-    .night{
-        // transition:3s;
-        opacity: 0;
-    }
+
+
     .sky {
         position: absolute;
         width: 100%;
         bottom: 26%;
-        transition:3s;
+        // transition:3s;
         z-index: 0;
         @media (max-width:1399px) {
             bottom: 38%;
@@ -72,6 +69,17 @@
             display: none;
         }
     }
+    .op1-0{
+        animation-name: op1-0;
+        animation-duration: 3s;
+        animation-fill-mode:both;
+    }
+    .op0-1{
+        animation-name: op0-1;
+        animation-duration: 3s;
+        animation-fill-mode:both;
+    }
+    
 
     .sun{
         position: absolute;
@@ -128,6 +136,25 @@
         padding-top: 8%;
     }
 }
+@keyframes op1-0{
+    0%{
+        opacity: 1;
+    }
+    100%{
+
+        opacity: 0;
+    }
+}
+@keyframes op0-1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+
+        opacity: 1;
+    }
+}
+
 @keyframes sun-dayToNight-x{
     0%{
         left: 71%;

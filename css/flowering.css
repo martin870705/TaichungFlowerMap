@@ -47,21 +47,16 @@
   width: 100%;
   top: 0%;
   z-index: 1;
-  transition: 3s;
 }
 @media (max-width: 539px) {
   #flowering .mountain {
     display: none;
   }
 }
-#flowering .night {
-  opacity: 0;
-}
 #flowering .sky {
   position: absolute;
   width: 100%;
   bottom: 26%;
-  transition: 3s;
   z-index: 0;
 }
 @media (max-width: 1399px) {
@@ -78,6 +73,22 @@
   #flowering .sky {
     display: none;
   }
+}
+#flowering .op1-0 {
+  -webkit-animation-name: op1-0;
+          animation-name: op1-0;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+#flowering .op0-1 {
+  -webkit-animation-name: op0-1;
+          animation-name: op0-1;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 #flowering .sun {
   position: absolute;
@@ -147,6 +158,39 @@
   }
 }
 
+@-webkit-keyframes op1-0 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes op1-0 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes op0-1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes op0-1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes sun-dayToNight-x {
   0% {
     left: 71%;
@@ -155,7 +199,6 @@
     left: 100%;
   }
 }
-
 @keyframes sun-dayToNight-x {
   0% {
     left: 71%;

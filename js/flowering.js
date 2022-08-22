@@ -13,14 +13,15 @@ const video = document.querySelector('video')
 console.dir(video);
 console.log(dayToNight);
 const isVisible = () => {
+   console.dir(night_sky);
    // 取得user browser的高度
    const windowHeight = window.innerHeight;
-   
+   let value = window.scrollY
        //目前target和上層的距離
        //還要加上banner的大小  banner與畫面同高所以加上畫面高
        const dayToNightOffsetY = dayToNight.offsetTop + windowHeight - window.pageYOffset;
        const nightToDayOffsetY = nightToDay.offsetTop + nightToDay2.offsetTop + windowHeight - window.pageYOffset;
-       
+      //  console.log(dayToNightOffsetY);
        // 檢查target距離目前頂端的距離
        // target目前距離頂端的距離 = target.offsetTop - user已經滾動的距離
        // 判斷target目前距離頂端的距離，是否小於user的視窗大小
@@ -32,19 +33,34 @@ const isVisible = () => {
          moon.classList.remove('moon-nightToDay')
          sun.style.animationPlayState = 'running'
          moon.style.animationPlayState = 'running'
-         night_mountain.classList.remove('night')
-         day_mountain.classList.add('night')
-         night_sky.classList.remove('night')
-         day_sky.classList.add('night')
+         night_mountain.classList.remove('op1-0')
+         night_sky.classList.remove('op1-0')
+         night_mountain.classList.add('op0-1')
+         night_sky.classList.add('op0-1')
+         day_mountain.classList.add('op1-0')
+         day_sky.classList.add('op1-0')
+         day_mountain.classList.remove('op0-1')
+         day_sky.classList.remove('op0-1')
+         // night_sky.style.transform = `translateY(${(value -1400) * 0.3}px)`
       } else if(nightToDayOffsetY >= windowHeight){
-         sun.classList.remove('sun-dayToNight')
-         sun.classList.add('sun-nightToDay')
-         moon.classList.remove('moon-dayToNight')
-         moon.classList.add('moon-nightToDay')
-         night_mountain.classList.add('night')
-         day_mountain.classList.remove('night')
-         night_sky.classList.add('night')
-         day_sky.classList.remove('night')
+         if(sun.classList.contains('sun-dayToNight')){
+            sun.classList.remove('sun-dayToNight')
+            sun.classList.add('sun-nightToDay')
+            moon.classList.remove('moon-dayToNight')
+            moon.classList.add('moon-nightToDay')
+            night_mountain.classList.add('op1-0')
+            night_sky.classList.add('op1-0')
+            night_mountain.classList.remove('op0-1')
+            night_sky.classList.remove('op0-1')
+            day_mountain.classList.remove('op1-0')
+            day_sky.classList.remove('op1-0')
+            day_mountain.classList.add('op0-1')
+            day_sky.classList.add('op0-1')
+         }
+         
+      }
+      if(window.innerWidth > 1400){
+         night_sky.style.transform = `translateY(${(value -1400) * 0.28}px)`
       }
    };
 

@@ -7,15 +7,24 @@
   display: none;
   z-index: 0;
 }
-#flowerMap-buttom-box img {
+#flowerMap-buttom-box #flower-map-bgi{
   width: 100%;
   position: absolute;
   z-index: -1;
-  top: -300px;
+  top: 0;
+  display: none;
+}
+#flowerMap-buttom-box #map-png {
+  width: 100%;
   display: none;
 }
 @media (max-width: 539px) {
-  #flowerMap-buttom-box img {
+  #flowerMap-buttom-box #flower-map-bgi{
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  #flowerMap-buttom-box #map-png{
     display: block;
   }
 }
