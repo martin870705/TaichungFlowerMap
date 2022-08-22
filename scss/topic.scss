@@ -68,7 +68,7 @@ body {
     .ham {
       position: fixed;
       color: #fff;
-      z-index: 3;
+      z-index: 4;
       right: 30px;
       font-size: 40px;
       cursor: pointer;
@@ -164,7 +164,7 @@ body {
       width: 1px;
       height: 100vh;
       top: 0;
-      z-index: 2;
+      z-index: 3;
       position: absolute;
       right: 0;
       /* display: none; */

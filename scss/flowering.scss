@@ -5,6 +5,17 @@
     // justify-content: center;
     padding-top: 9%;
     z-index: 0;
+    #flower-map-bgi{
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        bottom: -80%;
+        display: none;
+        @media (max-width: 539px) {
+
+          display: block;
+        }
+      }
     .text{
         display: flex;
         justify-content: center;
