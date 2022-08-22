@@ -195,9 +195,22 @@ body {
   list-style-type: none;
 }
 #banner .container .catalog .content ul a {
+  position: relative;
   text-decoration: none;
   color: white;
   white-space: nowrap;
+}
+#banner .container .catalog .content ul a::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: white;
+  bottom: 0;
+  transition: all 1s;
+}
+#banner .container .catalog .content ul a:hover::before {
+  width: 100%;
 }
 #banner .container .catalog .block {
   width: 500px;

@@ -11,7 +11,7 @@
  const start = document.querySelector('.start')
  const stop = document.querySelector('.stop')
  const music = document.querySelector('.music')
- 
+ const backs = document.querySelectorAll('.back')
  // const hbtn = document.querySelector('.hbtn')
  let i = 0;
  let k = 0;
@@ -86,15 +86,24 @@
  }  
 
  console.log(ham);
- ham.addEventListener('click', function () {
-     console.log(flat);
-     if (flat.classList.contains('switch')) {
-         flat.classList.remove('switch')
-     } else {
-         flat.classList.add('switch')
+ function ham2() {
+    console.log(flat);
+    if (flat.classList.contains("switch")) {
+      flat.classList.remove("switch");
+ 
+    } else {
+      flat.classList.add("switch");
+    }
+  };
+//  ham.addEventListener('click', function () {
+//      console.log(flat);
+//      if (flat.classList.contains('switch')) {
+//          flat.classList.remove('switch')
+//      } else {
+//          flat.classList.add('switch')
 
-     }
- })
+//      }
+//  })
 
  // 暂停
 function pauseVid() {
@@ -110,4 +119,17 @@ function playVid() {
 
  //預設值 音量 0.0 ~ 1.0 
  music.volume = 1.0;
+
 }
+//抓li裡面的a 點擊任一連結的時候 content收回漢堡排裡面 
+backs.forEach(function (back,index){
+   back.addEventListener('click',function(){
+       content.classList.remove("block");
+         flat_mid.classList.add("slow");
+         flat_mid.classList.remove("none");
+         flat.classList.remove("rotate-1");
+         flat.classList.remove("rotate-2");
+         i=0
+         ham2();
+     })
+ })
