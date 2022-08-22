@@ -8,12 +8,11 @@ const day_sky = document.querySelector('#day-sky')
 const dayToNight = document.getElementById('switch-dayToNight-tag');
 const nightToDay = document.getElementById('switch-nightToDay-tag')
 const nightToDay2 = document.getElementById('switch-nightToDay-tag-2')
-const video = document.querySelector('video')
+const text = document.querySelector('#flowering .text h2')
 
-console.dir(video);
-console.log(dayToNight);
+
 const isVisible = () => {
-   console.dir(night_sky);
+   console.dir(text);
    // 取得user browser的高度
    const windowHeight = window.innerHeight;
    let value = window.scrollY
@@ -41,6 +40,7 @@ const isVisible = () => {
          day_sky.classList.add('op1-0')
          day_mountain.classList.remove('op0-1')
          day_sky.classList.remove('op0-1')
+         text.style.color = '#fff'
          // night_sky.style.transform = `translateY(${(value -1400) * 0.3}px)`
       } else if(nightToDayOffsetY >= windowHeight){
          if(sun.classList.contains('sun-dayToNight')){
@@ -56,6 +56,7 @@ const isVisible = () => {
             day_sky.classList.remove('op1-0')
             day_mountain.classList.add('op0-1')
             day_sky.classList.add('op0-1')
+            text.style.color = '#000'
          }
          
       }

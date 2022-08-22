@@ -21,11 +21,17 @@
 #flowerMap-buttom-box .buttom {
   width: 60px;
   height: 35px;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #493645;
+  border: 1px solid #493645;
   text-align: center;
   line-height: 35px;
   margin: 5px;
+}
+@media (max-width: 539px) {
+  #flowerMap-buttom-box .buttom {
+    color: #fff;
+    border: 1px solid #fff;
+  }
 }
 #flowerMap-buttom-box .box {
   width: 60px;

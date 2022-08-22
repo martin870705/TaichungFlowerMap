@@ -25,6 +25,8 @@
   max-width: 1300px;
   z-index: 2;
   margin: 50px;
+  letter-spacing: 8px;
+  transition: 3s;
 }
 @media (max-width: 1023px) {
   #flowering .text h2 {

@@ -16,6 +16,7 @@ body #search h2 {
   text-align: center;
   font-size: 24px;
   margin: 0px;
+  letter-spacing: 8px;
 }
 body #search > img {
   width: 15%;
@@ -195,8 +196,11 @@ body #search .flower-image-box #flower-box .information .flower-news {
   padding-top: 100px;
   word-break: break-all;
 }
-body #search .flower-image-box #flower-box .information .flower-news h2 {
+body #search .flower-image-box #flower-box .information .flower-news h3 {
   margin-bottom: 30px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #2F4538;
 }
 body #search .flower-image-box #flower-box .information .flower-news .news {
   display: inline-block;
