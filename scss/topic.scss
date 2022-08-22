@@ -272,9 +272,13 @@ body {
     }
     .stop {
       display: none;
+      z-index: 1!important; 
     }
     .start-none{
       display: none;
+    }
+    .start{
+      z-index: 1!important; 
     }
     .stop-block {
       display: block;

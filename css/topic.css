@@ -268,9 +268,13 @@ body {
 }
 #banner .container .stop {
   display: none;
+  z-index: 1 !important;
 }
 #banner .container .start-none {
   display: none;
+}
+#banner .container .start {
+  z-index: 1 !important;
 }
 #banner .container .stop-block {
   display: block;
