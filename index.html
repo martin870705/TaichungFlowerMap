@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/imgList.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/loading.css">
     <style>
 
         *{
@@ -36,6 +37,9 @@
 </head>
 
 <body>
+    <div id="loading">
+        <h1 class="ml12">Loading...</h1>
+    </div>
     <header>
         <!--封面-->
         <audio class="music"  loop width="500px" id="jojo" width="500px" style="display: none">
@@ -2972,10 +2976,13 @@
             </div>
     </footer>
     <!--結尾-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="./js/loading.js"></script>
     <script src="./js/flowering.js"></script>
     <script src="./js/lightboxmodal.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/topic.js"></script>
+    
 </body>
 
 </html>
