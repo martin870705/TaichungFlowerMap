@@ -10,8 +10,9 @@ window.onload = function () {
         const test = document.querySelector('#loading')
         test.style.display = 'none'
         // document.body.style.position = 'unset'
-        console.log('123');
     }, 5000)
+
+    document.querySelector('video').play()
 }
 
        // Wrap every letter in a span
