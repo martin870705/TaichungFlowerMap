@@ -260,7 +260,7 @@ body #search .flower-image-box #flower-box .information .flower-introduce p {
 @media (max-width: 539px) {
   body #search .flower-image-box #flower-box .information .flower-introduce {
     background-image: url("../img/程式用圖區/花卉介紹綠底漸層.png");
-    background-size: cover;
+    background-size: contain;
   }
 }
 body #search .flower-image-box #flower-box .none {
