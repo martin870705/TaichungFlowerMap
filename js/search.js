@@ -38,7 +38,7 @@ fetch('./js/json/flower_data.json')
     .then(function (respomse) {
         return respomse.json()
     }).then(function (flowers) {
-        console.log(flowers);
+        // console.log(flowers);
         flowers.forEach(function (flower) {
             choose_flower.innerHTML += `<option>${flower.flower_name}</option>`//生成花列表
         })

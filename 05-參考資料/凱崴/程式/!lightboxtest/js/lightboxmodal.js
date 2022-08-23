@@ -101,7 +101,7 @@ fetch('./json/臺中市賞花景點.json')
         `
         }
         afps_img.textContent = '';
-        console.log('testya');
+        // console.log('testya');
     })
 
 
@@ -116,7 +116,7 @@ function flowermap_filter(area, index) {
     //=======================圖片區start===================================================
     //定位出要塞圖片的區域，採用id抓取
     const afps_img = document.getElementById('afps');
-    console.log(afps_img);
+    // console.log(afps_img);
     //先將圖片區都清掉
     afps_img.textContent = ` `;
     //將左右的按鈕復原
@@ -128,7 +128,7 @@ function flowermap_filter(area, index) {
 
     //=======================說明區start===================================================
     const afd = document.getElementById('afd');
-    console.log(afd);
+    // console.log(afd);
     // 清空內容
     afd.textContent = ``;
     //舊版QQ
@@ -248,7 +248,7 @@ function flowermap_filter(area, index) {
 
     //=======================地點區start===================================================
     const ali_block = document.getElementById('ali');
-    console.log(ali);
+    // console.log(ali);
     ali_block.textContent = `
         
     `;
@@ -258,7 +258,7 @@ function flowermap_filter(area, index) {
     const afd_title_text = document.querySelector('#afd-title .afd-title-text p span');
     // console.log(afd_title_text);
     const afd_weather_briefly_text = document.getElementById('afd-weather-brieflytext');
-    console.log(afd_weather_briefly_text);
+    // console.log(afd_weather_briefly_text);
     const afd_temp_text = document.getElementById('afd-weather-temptext');
     const afd_rain_text = document.getElementById('afd-weather-raintext');
     const afdcob_name_text = document.getElementById('afdcob-text-name-text');
@@ -299,7 +299,7 @@ function flowermap_filter(area, index) {
             for (let i = 0; i < array_area_location.length; i++) {
                 let iconnum = i + 1;
                 if(i==index){
-                    console.log('loctaionttest');
+                    // console.log('loctaionttest');
                     ali_block.innerHTML += `
                     <div class="area-location areabody-location${iconnum} areabody-location-active" onclick="flowermap_filter('${area}',${i})">${array_area_location[i]}</div>
                     `
@@ -360,8 +360,8 @@ function flowermap_filter(area, index) {
 
             a_google_link_desktop.href=string_locationgooglelink;
             a_googlelink_phone.href=string_locationgooglelink;
-            console.log(a_google_link_desktop);
-            console.log(string_locationaddress);
+            // console.log(a_google_link_desktop);
+            // console.log(string_locationaddress);
 
         })
 
@@ -371,7 +371,7 @@ function flowermap_filter(area, index) {
         })
         .then(function (mydata) {
             const shortcut=mydata.records.locations[0].location;
-            console.log(shortcut);
+            // console.log(shortcut);
             // console.log(afd);
             let locationnum=0;
             //取出我們現在所要的區域真正對應到氣象局的是哪個陣列的資料
@@ -382,13 +382,13 @@ function flowermap_filter(area, index) {
                 }
             }
             //抓到真正的區域ok
-            console.log(shortcut[locationnum].locationName);
+            // console.log(shortcut[locationnum].locationName);
             const brieflyshortcut=shortcut[locationnum].weatherElement[1].time[0].elementValue[0].value;
             // console.log(shortcut[locationnum].weatherElement[1].time[0].elementValue[0].value)
             //待修改 之後可以利用當前時間再去判斷要插入哪一筆資料:主要是time的位子
             afd_weather_briefly_text.innerHTML+=`${brieflyshortcut}`;
             const tempshortcut=shortcut[locationnum].weatherElement[3].time;
-            console.log(tempshortcut);
+            // console.log(tempshortcut);
             let int_low_temp=30;
             let int_high_temp=0;
             //這邊只取到8因為只想看前八筆資料,代表當天的資料,去抓取當天最高&最低氣溫
@@ -427,7 +427,7 @@ function imgtest() {
         })
         .then(function (mydata) {
             for (let i = 0; i < mydata.length; i++) {
-                console.log(mydata[i].locationpic);
+                // console.log(mydata[i].locationpic);
                 divimgtest.innerHTML += `
             <img src=" ${mydata[i].locationpic}" alt="">
             `

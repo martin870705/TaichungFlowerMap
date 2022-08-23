@@ -63,7 +63,7 @@
          }
      })
  } else {
-     console.log(ham.offsetTop);
+    //  console.log(ham.offsetTop);
      window.addEventListener("scroll", function () {
          //   console.log(scrollY);
          if (window.scrollY >= 436) {
@@ -85,9 +85,9 @@
      })
  }  
 
- console.log(ham);
+//  console.log(ham);
  function ham2() {
-    console.log(flat);
+    // console.log(flat);
     if (flat.classList.contains("switch")) {
       flat.classList.remove("switch");
  

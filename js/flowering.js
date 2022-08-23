@@ -12,7 +12,7 @@ const text = document.querySelector('#flowering .text h2')
 
 
 const isVisible = () => {
-   console.dir(text);
+   // console.dir(text);
    // 取得user browser的高度
    const windowHeight = window.innerHeight;
    let value = window.scrollY
