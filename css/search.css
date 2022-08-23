@@ -116,6 +116,19 @@ body #search #icon-box #icon img {
 body #search #icon-box #icon img:hover {
   transform: scale(1.1);
 }
+body #search #icon-box #icon img:active {
+  transform: scale(0.9);
+}
+body #search #icon-box #icon img.breath {
+  -webkit-animation-name: breath;
+          animation-name: breath;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
 @media (max-width: 1023px) {
   body #search #icon-box #icon img {
     width: 50PX;
@@ -325,5 +338,29 @@ body #search .flower-image-box .girl-img .bird {
   body #search .flower-image-box {
     height: auto;
     min-height: 800px;
+  }
+}
+
+@-webkit-keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=search.css.map */

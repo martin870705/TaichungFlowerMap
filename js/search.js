@@ -86,21 +86,28 @@ fetch('./js/json/flower_data.json')
             })
         })
 
-        choose_flower.addEventListener('change', function () {//選擇花朵最大  選甚麼就列哪種icon
+        choose_flower.addEventListener('change', icon)
+        function icon(){
             flower_icon.innerHTML = ''
-            choose_mouth.selectedIndex = '0'
-            choose_places.selectedIndex = '0'
-            flowers.forEach(function (flower) {
-                if (flower.flower_name == choose_flower.value) {
-
-                    flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                } else if (choose_flower.value == '全部') {
-                    flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-                }
-            })
-
-        })
+                choose_mouth.selectedIndex = '0'
+                choose_places.selectedIndex = '0'
+                flowers.forEach(function (flower) {
+                    if (flower.flower_name == choose_flower.value) {
+    
+                        flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                    } else if (choose_flower.value == '全部') {
+                        flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                    }
+                })
+        }
+        icon();
     })
+
+
+
+
+
+
 
 fetch('./js/json/flower_data.json')//進網站就將所有花資料生成好並隱藏
     .then(function (respomse) {
@@ -138,6 +145,11 @@ fetch('./js/json/flower_data.json')//進網站就將所有花資料生成好並�
 
 
 function check(Flower) {//點擊icon將對應資料顯示
+    const icons = document.querySelectorAll('#search #icon-box #icon img')
+    icons.forEach(function(icon){
+        icon.classList.remove('breath')
+    })
+    Flower.classList.add('breath')
     const informations = document.querySelectorAll('.information')
     informations.forEach(function (information) {
         if (Flower.alt == information.dataset.name) {
