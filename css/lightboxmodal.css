@@ -419,13 +419,14 @@
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon {
   width: 45%;
   text-align: center;
+  margin-right: 10%;
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon img{
   width: 100%;
 }
 @media (max-width: 767px) {
   * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon {
-    width: 10%;
+    width: 15%;
     margin-right: 13px;
   }
 }
@@ -441,7 +442,8 @@
 }
 @media (max-width: 380px) {
   * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon {
-    width: 8%;
+    margin-right: 12px;
+    width: 15%;
   }
 }
 * body #lightbox-test1 .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-weatherblock .weather-icon .fa-solid {
