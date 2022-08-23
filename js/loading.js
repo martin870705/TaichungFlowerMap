@@ -1,13 +1,17 @@
 // document.body.style.position = 'fixed'
 document.body.style.overflowY = 'hidden'
 window.onload = function () {
-    const test = document.querySelector('#loading')
-    test.style.opacity = '0'
+    setTimeout(function(){
+        const test = document.querySelector('#loading')
+        test.style.opacity = '0'
+        document.body.style.overflowY = 'scroll'
+    }, 2000)
     setTimeout(function () {
+        const test = document.querySelector('#loading')
         test.style.display = 'none'
         // document.body.style.position = 'unset'
-        document.body.style.overflowY = 'scroll'
-    }, 3000)
+        console.log('123');
+    }, 5000)
 }
 
        // Wrap every letter in a span
