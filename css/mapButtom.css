@@ -13,7 +13,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #flowerMap-buttom-box #map-png{
     display: block;
   }
@@ -41,5 +41,6 @@
 @media (max-width: 767px) {
   #flowerMap-buttom-box {
     display: flex;
+    padding-top: 70px;
   }
 }/*# sourceMappingURL=mapButtom.css.map */
