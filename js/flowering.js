@@ -60,7 +60,7 @@ const isVisible = () => {
          }
          
       }
-      if(window.innerWidth > 1400){
+      if(window.innerWidth > 1200){
          night_sky.style.transform = `translateY(${(value -1400) * 0.28}px)`
       }
    };
