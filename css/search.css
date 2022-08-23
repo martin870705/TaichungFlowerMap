@@ -140,6 +140,10 @@ body #search #icon-box #icon img.breath {
     margin: 0px 7.5px 20px 7.5px;
   }
 }
+body #search #icon-box #icon span {
+  font-size: 22px;
+  font-weight: bolder;
+}
 @media (max-width: 1023px) {
   body #search #icon-box {
     height: 300px;

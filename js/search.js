@@ -44,46 +44,59 @@ fetch('./js/json/flower_data.json')
         })
 
         choose_places.addEventListener('change', function () {//當用戶選擇地點
+            let tag = 0
             flower_icon.innerHTML = ''//清空icon
             choose_flower.selectedIndex = '0'//將花朵列表選項變為第一列
             flowers.forEach(function (flower) {
                 if (choose_places.value == '請選擇地點') {//假如沒有選擇地點
                     if (flower.flowering.includes(choose_mouth.value)) {//依照選擇的月份生成icon
                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                        tag = 1
                     }
                 }
                 else if (choose_mouth.value == '請選擇月份') {//假如沒有選擇月份
                     if (flower.flower_place.includes(choose_places.value.trim())) {//依照選擇地點生成icon
                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                        tag = 1
                     }
                 } else {//例外{選擇了月分與地點}
                     if (flower.flower_place.includes(choose_places.value.trim()) && flower.flowering.includes(choose_mouth.value)) {//生成的icon需同時包含選擇的地點與月份
                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
-
+                        tag = 1
                     }
                 }
             })
+            if(tag == 0){
+                flower_icon.innerHTML = `<span>查無花朵</span>`
+            }
         })
 
         choose_mouth.addEventListener('change', function () {//月份同上
+            let tag = 0
             flower_icon.innerHTML = ''
             choose_flower.selectedIndex = '0'
             flowers.forEach(function (flower) {
                 if (choose_mouth.value == '請選擇月份') {
                     if (flower.flower_place.includes(choose_places.value.trim())) {
                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                        tag = 1
                     }
                 }
                 else if (choose_places.value == '請選擇地點') {
                     if (flower.flowering.includes(choose_mouth.value)) {
                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                        tag = 1
                     }
                 } else {
                     if (flower.flower_place.includes(choose_places.value.trim()) && flower.flowering.includes(choose_mouth.value)) {
                         flower_icon.innerHTML += `<img src="${flower.flower_icon}" alt="${flower.flower_name}" onclick="check(this)">`
+                        tag = 1
                     }
                 }
             })
+            if(tag == 0){
+                flower_icon.innerHTML = `<span>查無花朵</span>`
+            }
         })
 
         choose_flower.addEventListener('change', icon)
