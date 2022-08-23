@@ -104,6 +104,7 @@
 * body #lightbox-test1 .container #map-svg .decorate {
   width: 100%;
   position: absolute;
+  top: -10%;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
@@ -131,9 +132,26 @@
           user-select: none;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 {
-  left: 9%;
+  left: 17%;
   top: 42%;
-  width: 10%;
+  width: 6%;
+}
+@media (max-width:767px) {
+  * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 {
+    left: 9%;
+    top: 42%;
+    width: 10%;
+  }
+  * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 {
+    left: 30%;
+    top: -1%;
+    width: 8%;
+  }
+  * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 {
+    right: 12%;
+    top: 100%;
+    width: 6%;
+  }
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird1 img {
   -webkit-user-drag: none;
@@ -141,17 +159,17 @@
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 {
   left: 30%;
-  top: -1%;
-  width: 8%;
+  top: -10%;
+  width: 4%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird2 img {
   -webkit-user-drag: none;
   width: 100%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 {
-  right: 12%;
+  right: 35%;
   top: 100%;
-  width: 6%;
+  width:2%;
 }
 * body #lightbox-test1 .container #map-svg .decorate .decorate-bird .bird3 img {
   -webkit-user-drag: none;
