@@ -41,13 +41,14 @@
         display: flex;
         justify-content: center;
         padding: 0px 25px;
-
-        .sheet {
-            border-radius: 15px;
-            box-shadow: 6px 6px 10px -4px black;
-            width: 100%;
-            max-width: 1300px;
+        a{
             z-index: 2;
+            .sheet {
+                border-radius: 15px;
+                box-shadow: 6px 6px 10px -4px black;
+                width: 100%;
+                max-width: 1300px;
+            }
         }
         @media (max-width:539px) {
             padding: 0px 14px;
