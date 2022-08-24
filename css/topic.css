@@ -30,6 +30,7 @@ body {
      object-fit: cover;
   background-color: black;
   opacity: 0.9;
+  z-index: 0;
 }
 #banner .container .title {
   position: absolute;
