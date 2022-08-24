@@ -32,7 +32,6 @@
 }
 * body #lightbox-test1 {
   position: relative;
-  z-index: 9999;
 }
 * body #lightbox-test1 * {
   box-sizing: border-box;
