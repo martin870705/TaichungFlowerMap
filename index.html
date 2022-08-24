@@ -77,6 +77,148 @@
                 webkit-playsinline>
                     <source src="./img/vedio/Topic (1).mp4" type="video/mp4"/>
                 </video>
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal();">&times</span>
+                  <div class="modal-content">
+                    <div class="areabody">
+                      <div class="areabody-flower-information">
+                        <div class="areabody-flower-pic-swiper" id="afps">
+                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                          <!-- 格式說明 實際上在執行時js會將整個輪播的區塊清空再重填 -->
+                          <img src="./img/花地圖/北屯區/廍子公園.png" alt="" class="afps-img-active">
+                        </div>
+                        <div class="areabody-flower-description" id="afd">
+                          <!-- 舊版本ＱＱ -->
+                          <!-- <div class="afd-title" id="afd-title">
+                            <div class="afd-title-location">和平區</div> 
+                          </div>
+                          <div class="afd-content" id="afd-content">
+                            <div class="afd-content-name-address-block">
+                              <div class="name">雪山國家森林遊樂園區</div>
+                              <div class="icon-text">
+                                <div class="icon"></div>
+                                <div class="address">台中市和平區雪山路18號</div>
+                              </div>
+                            </div>
+                            <div class="afd-content-type-map-block">
+                              <div class="icon-text">
+                                <div class="icon"></div>
+                                <div class="type"></div>
+                              </div>
+                              <a href="" id="afd-map-href">
+                                <div class="map-block">
+                                  <div class="icon-text">
+                                    <div class="icon"></div>
+                                    <div class="waytogo">導航怎麼去 Go!</div>
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="afd-content-weathercard-block">
+                              天氣小卡
+                            </div>
+                          </div> -->
+                          <!-- 下面會在點開modal的時候清空,僅空參考巢狀結構 -->
+                          <div class="afd-title" id="afd-title">
+                            <div class="afd-title-text">
+                              <p><span>和平區</span></p>
+                            </div>
+                          </div>
+                          <div class="afd-content" id="afd-content">
+                            <div class="afd-content-weatherblock">
+                              <div class="weather-icon"></div>
+                              <div class="weather-text-big-block">
+                                <div class="weather-text-briefly">
+                                  <p><span id="afd-weather-brieflytext">晴時多雲偶陣雨</span></p>
+                                </div>
+                                <div class="weather-text-temp-rain-block">
+                                  <div class="tempblock">
+                                    <div class="icon-text">
+                                      <p>
+                                        <span><i class="fa-solid fa-temperature-half"></i></span>
+                                        <span id="afd-weather-temptext">20℃-35℃</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="rainblock">
+                                    <div class="icon-text">
+                                      <p>
+                                        <span><i class="fa-solid fa-umbrella"></i></span>
+                                        <span id="afd-weather-raintext">降雨機率:60%</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="afd-content-other-block">
+                              <div class="afdcob-text" id="afdcob-text">
+                                <!-- 地點名稱,因為變版的時候接在後面會有一個超連結到googlemap的按鈕所以要藏一個icon -->
+                                <!-- 地點區塊 -->
+                                <div class="afdcob-text-name">
+                                  <!-- 因為icon會在後面  所以這邊是text-icon  -->
+                                  <div class="text-icon">
+                                    <p>
+                                      <span id="afdcob-text-name-text">雪山國家森林遊樂園區</span>
+                                      <!-- icon平常是看不到的  只有在縮到手機版的時候會出現-->
+                                      <Span>
+                                        <!-- 只想要在地圖的icon上有連結 給他個id方便DOM元素定位 -->
+                                        <a href="" id="lightbox-map-link-phone" target=_blank>
+                                          <i class="fa-solid fa-map-location-dot"></i>
+                                        </a>
+                                      </Span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <!-- 花種區塊 -->
+                                <div class="afdcob-text-flowertype">
+                                  <div class="icon-text">
+                                    <p>
+                                      <span><i class="fa-brands fa-pagelines"></i></span>
+                                    </p>
+                                    <div id="afdcob-text-flowertype-block">
+                                      <span>賞花種類:</span>
+                                      <span class="flowertype flowertype-active">櫻花</span>
+                                      <span>、</span>
+                                      <span class="flowertype">楓葉</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- 地址區塊 -->
+                                <div class="afdcob-text-address">
+                                  <div class="icon-text">
+                                    <p>
+                                      <span><i class="fa-solid fa-map-location-dot"></i></span>
+                                      <span id="afdcob-text-address-text">臺中市和平區雪山路18號</span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <!-- 地圖區塊 -->
+                                <div class="afdcob-text-map">
+                                  <!-- 這邊給他一個id,方便之後dom元素定位 -->
+                                  <a href="" id="lightbox-map-link-desktop" target=_blank>
+                                    <div class="icon-text">
+                                        <p>
+                                          <span><i class="fa-solid fa-map-location-dot"></i></span>
+                                          <span>導航怎麼去 GO!</span>
+                                        </p>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="areabody-location-icon" id="ali">
+                        <div class="area-location areabody-location1 areabody-location-active">demo1</div>
+                        <div class="area-location areabody-location2">demo2</div>
+                        <div class="area-location areabody-location3">demo3</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </header>
@@ -2684,148 +2826,7 @@
                     </div>
                   </div>
                   <!-- svg結束 -->
-                  <div id="myModal" class="modal">
-                    <span class="close cursor" onclick="closeModal();">&times</span>
-                    <div class="modal-content">
-                      <div class="areabody">
-                        <div class="areabody-flower-information">
-                          <div class="areabody-flower-pic-swiper" id="afps">
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                            <!-- 格式說明 實際上在執行時js會將整個輪播的區塊清空再重填 -->
-                            <img src="./img/花地圖/北屯區/廍子公園.png" alt="" class="afps-img-active">
-                          </div>
-                          <div class="areabody-flower-description" id="afd">
-                            <!-- 舊版本ＱＱ -->
-                            <!-- <div class="afd-title" id="afd-title">
-                              <div class="afd-title-location">和平區</div> 
-                            </div>
-                            <div class="afd-content" id="afd-content">
-                              <div class="afd-content-name-address-block">
-                                <div class="name">雪山國家森林遊樂園區</div>
-                                <div class="icon-text">
-                                  <div class="icon"></div>
-                                  <div class="address">台中市和平區雪山路18號</div>
-                                </div>
-                              </div>
-                              <div class="afd-content-type-map-block">
-                                <div class="icon-text">
-                                  <div class="icon"></div>
-                                  <div class="type"></div>
-                                </div>
-                                <a href="" id="afd-map-href">
-                                  <div class="map-block">
-                                    <div class="icon-text">
-                                      <div class="icon"></div>
-                                      <div class="waytogo">導航怎麼去 Go!</div>
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="afd-content-weathercard-block">
-                                天氣小卡
-                              </div>
-                            </div> -->
-                            <!-- 下面會在點開modal的時候清空,僅空參考巢狀結構 -->
-                            <div class="afd-title" id="afd-title">
-                              <div class="afd-title-text">
-                                <p><span>和平區</span></p>
-                              </div>
-                            </div>
-                            <div class="afd-content" id="afd-content">
-                              <div class="afd-content-weatherblock">
-                                <div class="weather-icon"></div>
-                                <div class="weather-text-big-block">
-                                  <div class="weather-text-briefly">
-                                    <p><span id="afd-weather-brieflytext">晴時多雲偶陣雨</span></p>
-                                  </div>
-                                  <div class="weather-text-temp-rain-block">
-                                    <div class="tempblock">
-                                      <div class="icon-text">
-                                        <p>
-                                          <span><i class="fa-solid fa-temperature-half"></i></span>
-                                          <span id="afd-weather-temptext">20℃-35℃</span>
-                                        </p>
-                                      </div>
-                                    </div>
-                                    <div class="rainblock">
-                                      <div class="icon-text">
-                                        <p>
-                                          <span><i class="fa-solid fa-umbrella"></i></span>
-                                          <span id="afd-weather-raintext">降雨機率:60%</span>
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="afd-content-other-block">
-                                <div class="afdcob-text" id="afdcob-text">
-                                  <!-- 地點名稱,因為變版的時候接在後面會有一個超連結到googlemap的按鈕所以要藏一個icon -->
-                                  <!-- 地點區塊 -->
-                                  <div class="afdcob-text-name">
-                                    <!-- 因為icon會在後面  所以這邊是text-icon  -->
-                                    <div class="text-icon">
-                                      <p>
-                                        <span id="afdcob-text-name-text">雪山國家森林遊樂園區</span>
-                                        <!-- icon平常是看不到的  只有在縮到手機版的時候會出現-->
-                                        <Span>
-                                          <!-- 只想要在地圖的icon上有連結 給他個id方便DOM元素定位 -->
-                                          <a href="" id="lightbox-map-link-phone" target=_blank>
-                                            <i class="fa-solid fa-map-location-dot"></i>
-                                          </a>
-                                        </Span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <!-- 花種區塊 -->
-                                  <div class="afdcob-text-flowertype">
-                                    <div class="icon-text">
-                                      <p>
-                                        <span><i class="fa-brands fa-pagelines"></i></span>
-                                      </p>
-                                      <div id="afdcob-text-flowertype-block">
-                                        <span>賞花種類:</span>
-                                        <span class="flowertype flowertype-active">櫻花</span>
-                                        <span>、</span>
-                                        <span class="flowertype">楓葉</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!-- 地址區塊 -->
-                                  <div class="afdcob-text-address">
-                                    <div class="icon-text">
-                                      <p>
-                                        <span><i class="fa-solid fa-map-location-dot"></i></span>
-                                        <span id="afdcob-text-address-text">臺中市和平區雪山路18號</span>
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <!-- 地圖區塊 -->
-                                  <div class="afdcob-text-map">
-                                    <!-- 這邊給他一個id,方便之後dom元素定位 -->
-                                    <a href="" id="lightbox-map-link-desktop" target=_blank>
-                                      <div class="icon-text">
-                                          <p>
-                                            <span><i class="fa-solid fa-map-location-dot"></i></span>
-                                            <span>導航怎麼去 GO!</span>
-                                          </p>
-                                      </div>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="areabody-location-icon" id="ali">
-                          <div class="area-location areabody-location1 areabody-location-active">demo1</div>
-                          <div class="area-location areabody-location2">demo2</div>
-                          <div class="area-location areabody-location3">demo3</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
         </section>
