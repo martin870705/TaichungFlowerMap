@@ -30,6 +30,17 @@
   text-align: center;
   color: white;
 }
+#footer .bottom-text .bottom-buttom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#footer .bottom-text .bottom-buttom a{
+  border: 1px solid white;
+  padding: 15px 30px;
+  color: white;
+  text-decoration:none;
+}
 @media (max-width: 539px) {
   #footer p {
     letter-spacing: 0px;
