@@ -612,6 +612,9 @@ body #banner .container .modal *{
     display: none;
   }
 }
+* body #banner .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-map a{
+  text-decoration: none;
+}
 * body #banner .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-map .icon-text {
   background-color: white;
   border-radius: 25px;

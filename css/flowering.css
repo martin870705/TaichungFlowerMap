@@ -171,7 +171,7 @@
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #flowering {
     padding-top: 8%;
   }

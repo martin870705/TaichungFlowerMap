@@ -23,7 +23,7 @@ body #search > img {
   min-width: 180px;
   margin: 80px 0px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search > img {
     margin: 65px 0px;
   }
@@ -302,7 +302,7 @@ body #search .flower-image-box .girl-img {
 body #search .flower-image-box .girl-img .girl {
   width: 200px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box .girl-img .girl {
     display: none;
   }
@@ -311,12 +311,12 @@ body #search .flower-image-box .girl-img .bird {
   display: none;
   width: 150px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box .girl-img .bird {
     display: block;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box .girl-img {
     width: 100%;
     justify-content: flex-end;
@@ -327,7 +327,7 @@ body #search .flower-image-box .girl-img .bird {
     display: none;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body #search .flower-image-box {
     height: 600px;
     flex-wrap: wrap;

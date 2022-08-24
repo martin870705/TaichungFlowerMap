@@ -38,7 +38,7 @@
   justify-content: end;
   text-align: end;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #imgList .title .text-left {
     letter-spacing: 7px;
   }
@@ -60,7 +60,7 @@
   display: flex;
   align-items: flex-end;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #imgList .title .text-right {
     letter-spacing: 7px;
   }

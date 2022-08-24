@@ -12,9 +12,11 @@
  const stop = document.querySelector('.stop')
  const music = document.querySelector('.music')
  const backs = document.querySelectorAll('.back')
- // const hbtn = document.querySelector('.hbtn')
+ const mp4 = document.querySelector('#mp4')
  let i = 0;
  let k = 0;
+
+
  ham.addEventListener("click", function () {
      if (i == 0) {
 
