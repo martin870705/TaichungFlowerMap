@@ -180,6 +180,11 @@
   top: 330%;
   width: 100%;
 }
+@media (max-width:1023px) {
+  * body #lightbox-test1 .container #map-svg .decorate .decorate-taichungflower{
+    top: 270%;
+  }
+}
 * body #lightbox-test1 .container #map-svg .decorate .decorate-taichungflower img {
   width: 30%;
   position: absolute;
