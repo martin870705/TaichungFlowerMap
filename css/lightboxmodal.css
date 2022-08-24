@@ -206,6 +206,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
 }
+body #banner .container .modal *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 @media (max-width: 767px) {
   * body #banner .container .modal {
     padding-top: 10vh;
