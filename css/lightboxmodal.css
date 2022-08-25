@@ -546,10 +546,12 @@ body #banner .container .modal *{
 }
 * body #banner .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-name .text-icon #lightbox-map-link-phone i {
   display: none;
+  color: white;
 }
 @media (max-width: 767px) {
   * body #banner .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-name .text-icon #lightbox-map-link-phone i {
     display: inline-block;
+
   }
 }
 * body #banner .container .modal .modal-content .areabody .areabody-flower-information .areabody-flower-description #afd-content .afd-content-other-block #afdcob-text .afdcob-text-flowertype {
