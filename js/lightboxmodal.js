@@ -89,20 +89,19 @@ btns.forEach(function (btn, num) {
 });
 
 
-fetch('./js/json/flower_view.json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (mydata) {
-        const afps_img = document.getElementById('afps');
-        for (let i = 0; i < mydata.length; i++) {
-            afps_img.innerHTML += `
-        <img src="${mydata[i].locationpic}" alt="" class="afps-img afps-img0 afps-img-active">
-        `
-        }
-        afps_img.textContent = '';
-        // console.log('testya');
-    })
+// fetch('./js/json/flower_view.json')
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (mydata) {
+//         const afps_img = document.getElementById('afps');
+//         for (let i = 0; i < mydata.length; i++) {
+//             afps_img.innerHTML += `
+//         <img src="${mydata[i].locationpic}" alt="" class="afps-img afps-img0 afps-img-active">
+//         `
+//         }
+//         afps_img.textContent = '';
+//     })
 
 
 
